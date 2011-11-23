@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="tu95-jsbsim-cnf.xml"> -->
+<PropertyList include="tu95-yasim-cnf.xml">
+
+  <sim>
+    <description>Tupolev Tu-95 (YASim)</description>
+    <author>BARANGER Emmanuel</author>
+  </sim>
+
+</PropertyList>
+
