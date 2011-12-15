@@ -4,8 +4,17 @@
 <PropertyList include="tu95-yasim-cnf.xml">
 
   <sim>
+
     <description>Tupolev Tu-95 (YASim)</description>
     <author>BARANGER Emmanuel</author>
+
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>

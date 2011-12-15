@@ -220,8 +220,8 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/TU-95/Models/Effects/BumpMap/bumpspec</inherits-from>
-    <!-- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from> -->
+    <!-- <inherits-from>Aircraft/TU-95/Models/Effects/BumpMap/bumpmap</inherits-from> -->
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
