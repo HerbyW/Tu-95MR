@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <!-- <PropertyList include="tu95-jsbsim-cnf.xml"> -->
 <PropertyList include="tu95-yasim-cnf.xml">
@@ -6,7 +6,7 @@
   <sim>
 
     <description>Tupolev Tu-95 (YASim)</description>
-    <author>BARANGER Emmanuel</author>
+    <author>BARANGER Emmanuel (3D/FDM) / F-GTUX (FDM)</author>
 
     <rating>
       <FDM type="int">     1 </FDM>

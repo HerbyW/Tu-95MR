@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <!--
 ************************************************************************
@@ -12,6 +12,7 @@ October 2011 BARANGER Emmanuel
   <sim>
 
     <description>Tupolev Tu-95 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM) / F-GTUX (FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>tu95-yasim</aero>
 
