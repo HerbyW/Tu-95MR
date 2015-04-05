@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> 
- 
+
 <PropertyList>
-
+  
   <fx>
-
+    
     <!-- Moteur 1 -->
     <engine>
       <name>engine</name>
@@ -32,7 +32,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
@@ -60,7 +60,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- Moteur 2 -->
     <engine>
       <name>engine</name>
@@ -89,7 +89,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
@@ -117,7 +117,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- Moteur 3 -->
     <engine>
       <name>engine</name>
@@ -146,7 +146,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
@@ -174,7 +174,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- Moteur 4 -->
     <engine>
       <name>engine</name>
@@ -203,7 +203,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>enginerun</name>
       <mode>looped</mode>
@@ -231,7 +231,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -251,7 +251,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -260,7 +260,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -273,7 +273,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -308,7 +308,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
- 
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -320,7 +320,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </flap>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -341,7 +341,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
- 
+    
     <stall>
       <name>stall</name>
       <mode>looped</mode>
@@ -354,7 +354,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
- 
+    
   </fx>
- 
+  
 </PropertyList>

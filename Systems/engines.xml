@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <engine n="0">
+    <engine-num type="int">0</engine-num>
+    <boost type="double">0</boost>
+    <magnetos>3</magnetos>
+    <rpm>500</rpm>
+    <running>true</running>
+  </engine>
+  
+  <engine n="1">
+    <engine-num type="int">1</engine-num>
+    <boost type="double">0</boost>
+    <magnetos>3</magnetos>
+    <rpm>500</rpm>
+    <running>true</running>
+  </engine>
+  
+  <engine n="2">
+    <engine-num type="int">2</engine-num>
+    <boost type="double">0</boost>
+    <magnetos>3</magnetos>
+    <rpm>500</rpm>
+    <running>true</running>
+  </engine>
+  
+  <engine n="3">
+    <engine-num type="int">3</engine-num>
+    <boost type="double">0</boost>
+    <magnetos>3</magnetos>
+    <rpm>500</rpm>
+    <running>true</running>
+  </engine>
+  
+</PropertyList>
