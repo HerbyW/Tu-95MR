@@ -28,7 +28,7 @@
   </nasal>
 
     <sound>
-       <path>Aircraft/Tu-95MR/Sounds/tu95-sound.xml</path>
+       <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound.xml</path>
  </sound>
   
  <animation>

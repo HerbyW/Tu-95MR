@@ -815,9 +815,19 @@
   <name>Set Hight</name>
   <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/alt-set/alt-set.xml</path>
   <offsets>
-      <x-m>  0.00 </x-m>
+      <x-m>  0.005 </x-m>
       <y-m> -0.283 </y-m>
       <z-m>  0.180 </z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Set Pitch</name>
+  <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/alt-set/pitch-set.xml</path>
+  <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m> -0.30 </y-m>
+      <z-m>  0.250 </z-m>
   </offsets>
  </model>
     
