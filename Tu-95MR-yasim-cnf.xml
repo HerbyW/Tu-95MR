@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--
+************************************************************************
+Tupolev Tu-95
+October 2011 BARANGER Emmanuel
+
+update for animations and FDM: HerbyW
+************************************************************************
+-->
+
+<PropertyList include="Tu-95MR-base.xml">
+
+  <sim>
+
+    <description>Tupolev Tu-95MR (YASim)</description>
+    <author>HerbyW (FDM,animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>Tu-95MR-yasim</aero>
+
+  </sim>
+  
+</PropertyList>

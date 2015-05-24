@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    ###################################################################################
+    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-May2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later
+    
+    Firefly: 3D model improvment
+    Eagel: Liveries
+    ###################################################################################
+-->
+<PropertyList>
+
+  <help>
+      <title>Tupolev Tu-95MR Bear-D</title>
+      
+  <key>
+    <name>s</name>
+    <desc>Autostart</desc>
+  </key>
+  
+  <key>
+    <name>Delete</name>
+    <desc>Reverser on/off</desc>
+  </key>
+  <key>
+    <name>&lt;</name>
+    <desc>Change Pilot Engineer View</desc>
+  </key>
+  
+  <text>Welcome to Tupolev Tu-95MR Bear-D by HerbyW
+    
+	Some instruments will show you metric values, some ft.
+	
+	Please refer to the AN-12 for more informations.
+	
+	There is a green panel in the middle console, the right switch makes the lights on.
+	The middle switch is for nav-lights. The switch right from this panel is for landing and taxi lights.
+	
+	You have a panel with 5 lamps in the middle, the lower 3 are for trim-neutralisation.
+	
+	The Autopilot Helper panel in the top middle console is fully working.You may use some instruments to put in the values -
+	- Heading Control: Heading Bug (HDG) and Course of ILS (NAV) are to set in the HSI (Horizontal Situation Indicator),
+	- Velocity Control: Speed with Throttle are set in the Speed Indicator, then push IAS
+	- Pitch/Attitude Control is working if you get the plane in a climbing or descending position and push the Button VS,
+	- Wing leveler is activ when you push the AP button, it is also the AP activating Button,
+	- APRP is used for intersepting the Glide Scope,
+	- GPS for flying routes from the Route Manager,
+	- ALT is holding your attidude, push again if the altidude will not get stable
+	
+	For ILS Landing you may use the little Instrument with the yellow and blue strips, the NAV Indicator, it
+	gives you the indication that ILS and/or Glide Scope is intersepted.
+	
+	Flaps Controll Panel will give you the right level for landing (on the right side) and starting (on the left side),
+	if the white strips are in the middle position (1-2 for starting, 2-4 for landing).
+	
+	There are 3 Altimeters: one is in meter and mmHG, the other one in ft and inHG,
+	they are connected and you should set them to the ATIS information of the airport befor starting (not working for now).
+	
+	You may set your payloads and fuel in the menue.
+	
+	As it is a heavy aircraft it needs some special care about propper landing and starting routines :)
+	
+	Maximal start weight is: 188,000 kg = 414,500 lb
+	Maximum speed: 920 km/h (510 knots, 575 mph)
+        Range: 15,000 km (8,100 nmi, 9,400 mi) unrefueled
+        Service ceiling: 13,716 m (45,000 ft)
+        Rate of climb: 10 m/s (2,000 ft/min)
+        Wing loading: 606 kg/m² (124 lb/ft²)
+        Power/mass: 235 W/kg (0.143 hp/lb)
+      </text>
+      
+      </help>
+  
+</PropertyList>
