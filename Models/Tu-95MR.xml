@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
 
 <PropertyList>
 
@@ -27,9 +35,9 @@
     </unload>
   </nasal>
 
-    <sound>
-       <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound.xml</path>
- </sound>
+  <sound>
+    <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound.xml</path>
+  </sound>
   
  <animation>
     <!-- Objets opaques -->
@@ -563,7 +571,7 @@
     <object-name>propdiscGE1</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -575,11 +583,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -591,7 +599,7 @@
     <object-name>heliceGE1</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -600,7 +608,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteGE1</object-name>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
       <x-m>  -8.625 </x-m>
@@ -629,7 +637,7 @@
     <object-name>propdiscGE2</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -641,11 +649,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -657,7 +665,7 @@
     <object-name>heliceGE2</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -666,7 +674,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteGE2</object-name>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
     <factor> -1 </factor>
     <center>
       <x-m>  -7.832 </x-m>
@@ -695,7 +703,7 @@
     <object-name>propdiscGI1</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -707,11 +715,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -723,7 +731,7 @@
     <object-name>heliceGI1</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -732,7 +740,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteGI1</object-name>
-    <property>/engines/engine[1]/rpm</property>
+    <property>engines/engine[1]/rpm</property>
     <factor> 1 </factor>
     <center>
       <x-m> -11.906 </x-m>
@@ -761,7 +769,7 @@
     <object-name>propdiscGI2</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -773,11 +781,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -789,7 +797,7 @@
     <object-name>heliceGI2</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -798,7 +806,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteGI2</object-name>
-    <property>/engines/engine[1]/rpm</property>
+    <property>engines/engine[1]/rpm</property>
     <factor> -1 </factor>
     <center>
       <x-m> -11.114 </x-m>
@@ -827,7 +835,7 @@
     <object-name>propdiscDI1</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -839,11 +847,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -855,7 +863,7 @@
     <object-name>heliceDI1</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -864,7 +872,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteDI1</object-name>
-    <property>/engines/engine[2]/rpm</property>
+    <property>engines/engine[2]/rpm</property>
     <factor> 1 </factor>
     <center>
       <x-m> -11.906 </x-m>
@@ -893,7 +901,7 @@
     <object-name>propdiscDI2</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -905,11 +913,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -921,7 +929,7 @@
     <object-name>heliceDI2</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -930,7 +938,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteDI2</object-name>
-    <property>/engines/engine[2]/rpm</property>
+    <property>engines/engine[2]/rpm</property>
     <factor> -1 </factor>
     <center>
       <x-m> -11.114 </x-m>
@@ -959,7 +967,7 @@
     <object-name>propdiscDE1</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -971,11 +979,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -987,7 +995,7 @@
     <object-name>heliceDE1</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -996,7 +1004,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteDE1</object-name>
-    <property>/engines/engine[3]/rpm</property>
+    <property>engines/engine[3]/rpm</property>
     <factor> 1 </factor>
     <center>
       <x-m> -8.625 </x-m>
@@ -1025,7 +1033,7 @@
     <object-name>propdiscDE2</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600</value>
       </greater-than>
     </condition>
@@ -1037,11 +1045,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>400.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600.001</value>
       </less-than>
     </and>
@@ -1053,7 +1061,7 @@
     <object-name>heliceDE2</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <value>600</value>
       </less-than>
     </condition>
@@ -1062,7 +1070,7 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteDE2</object-name>
-    <property>/engines/engine[3]/rpm</property>
+    <property>engines/engine[3]/rpm</property>
     <factor> -1 </factor>
     <center>
       <x-m> -7.832 </x-m>
@@ -1741,17 +1749,104 @@
     </axis>
   </animation>
 
-  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
-  <animation>
+    <!-- Compression -->
+    
+    <animation>
     <name>RoueAvant</name>
     <object-name>roueA</object-name>
-    <object-name>axeA</object-name>
-    <object-name>axeB</object-name>
+    <object-name>axeA1</object-name>
+    <object-name>axeA2</object-name>
   </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>RoueAvant</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>TrainGauche</name>
+    <object-name>roueG1</object-name>
+    <object-name>roueG2</object-name>
+    <object-name>roueG3</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeG3</object-name>
+  </animation>
+    
+  <animation>
+    <type>translate</type>
+    <object-name>TrainGauche</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>TrainDroit</name>
+    <object-name>roueD1</object-name>
+    <object-name>roueD2</object-name>
+    <object-name>roueD3</object-name>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>axeD3</object-name>
+  </animation>
+    
+  <animation>
+    <type>translate</type>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[4]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueB</object-name>
+    <property>sim/multiplay/generic/float[1]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+
+  
+
+  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+  
 
   <animation>
     <type>rotate</type>
-    <object-name>RoueAvant</object-name>
+    <object-name>roueA</object-name>
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -30 </factor>
     <center>

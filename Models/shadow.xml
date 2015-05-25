@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
 
 <PropertyList>
 
@@ -20,24 +28,22 @@
     <type>select</type>
     <object-name>shadow</object-name>
     <condition>
-      <and>
-        <not><property>sim/freeze/replay-state</property></not>
-        <not><property>sim/rendering/shadows/enabled</property></not>
-      </and>
+     <and>
+       <property>/sim/rendering/shadows/enabled</property>
+      <not><property>sim/multiplay/generic/int[4]</property></not>      
+     </and>
     </condition>
   </animation>
 
-  <!-- Une ombre pour OSG en attendant mieux ;) basé sur l'ombre du DC 3-->
   <!-- pitch -->
   <animation>
     <type>rotate</type>
     <object-name>shadow</object-name>
-    <property>/orientation/pitch-deg</property>
-    <factor> -1 </factor>
+    <property>sim/multiplay/generic/float[14]</property>    
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -45,8 +51,7 @@
   <animation>
     <type>rotate</type>
     <object-name>shadow</object-name>
-    <property>/orientation/roll-deg</property>
-    <factor> 1 </factor>
+    <property>sim/multiplay/generic/float[15]</property>    
     <axis>
       <x> 1 </x>
       <y> 0 </y>
@@ -59,11 +64,10 @@
    <type>translate</type>
    <object-name>shadow</object-name>
    <property>sim/multiplay/generic/float[2]</property>
-   <factor> -1 </factor>
    <axis>
-     <x> 0 </x>
-     <y> 0 </y>
-     <z> 1 </z>
+     <x>  0 </x>
+     <y>  0 </y>
+     <z> -1 </z>
    </axis>
  </animation>
 
