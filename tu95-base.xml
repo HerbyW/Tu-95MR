@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+ 
+    <description>Tupolev Tu-95 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM) / F-GTUX (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/TU-95/tu95-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/TU-95/Models/tu95.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <sound>
+      <path>Aircraft/TU-95/Sounds/tu95-sound.xml</path>
+    </sound>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">  0 </int>                                         <!--  0 immat -->
+        <int   n="1"  type="int">  0 </int>                                         <!--  1 immat -->
+        <int   n="2"  type="int">  0 </int>                                         <!--  2 immat -->
+        <int   n="3"  type="int">  0 </int>                                         <!--  3 immat -->
+        <int   n="4"  type="int">  0 </int>                                         <!--  4 immat -->
+        <int   n="5"  type="int">  0 </int>                                         <!--  5 immat -->
+        <int   n="6"  type="bool" alias="/smoke/active"> 0 </int>                   <!--  6 start smoke -->
+        <int   n="7"  type="int" alias="smoke/particlepersec"> 50 </int>            <!--  7 particlepersec -->
+        <int   n="10" type="int" alias="controls/armament/trigger">0</int>          <!-- 10 reserved for bombable mode -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/cranking"/>
+        <float n="5"  alias="/engines/engine[1]/cranking"/>
+        <float n="6"  alias="/engines/engine[2]/cranking"/>
+        <float n="7"  alias="/engines/engine[3]/cranking"/>
+        <float n="8"  alias="/engines/engine[0]/rpm"/>
+        <float n="9"  alias="/engines/engine[1]/rpm"/>
+        <float n="10" alias="/engines/engine[2]/rpm"/>
+        <float n="11" alias="/engines/engine[3]/rpm"/>
+        <float n="12" alias="/gear/gear[0]/wow/"/>
+        <float n="13" alias="/gear/gear[3]/wow/"/>
+        <float n="14" alias="/gear/gear[6]/wow/"/>
+        <float n="15" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="16" alias="/gear/gear[3]/rollspeed-ms"/>
+        <float n="17" alias="/gear/gear[6]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/tu95-menu.xml"/>
+
+  </sim>
+
+  <input include="Systems/tu95-keyboard.xml"/>
+  
+  <controls include="Systems/controls.xml"/>
+
+  <engines include="Systems/engines.xml"/>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/TU-95/Nasal/doors.nas</file>
+    </doors>
+    <tu95>
+      <file>Aircraft/TU-95/Nasal/liveries.nas</file>
+      <file>Aircraft/TU-95/Nasal/light.nas</file>
+    </tu95>
+  </nasal>
+
+</PropertyList>
