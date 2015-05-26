@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <!--
     ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-May2015
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
     Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment
-    Eagel: Liveries
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
     ###################################################################################
 -->
+
 <PropertyList>
 
-  <help>
+  
       <title>Tupolev Tu-95MR Bear-D</title>
       
   <key>
@@ -59,6 +58,8 @@
 	
 	You may set your payloads and fuel in the menue.
 	
+	!!!!! You may not change the payload for now, the FDM needs more adjustments !!!!!
+	
 	As it is a heavy aircraft it needs some special care about propper landing and starting routines :)
 	
 	Maximal start weight is: 188,000 kg = 414,500 lb
@@ -70,6 +71,6 @@
         Power/mass: 235 W/kg (0.143 hp/lb)
       </text>
       
-      </help>
+     
   
 </PropertyList>

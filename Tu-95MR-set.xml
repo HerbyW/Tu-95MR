@@ -1,17 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- <PropertyList include="tu95-jsbsim-cnf.xml"> -->
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
+
 <PropertyList include="Tu-95MR-yasim-cnf.xml">
-
+  
   <sim>
-
+    
     <description>Tupolev Tu-95MR (YASim)</description>
     <author>HerbyW (FDM, animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
-
+    
     <rating>
-      <FDM type="int">     2 </FDM>
-      <systems type="int"> 0 </systems>
-      <cockpit type="int"> 0 </cockpit>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 3 </systems>
+      <cockpit type="int"> 3 </cockpit>
       <model type="int">   3 </model>
     </rating>
     
@@ -25,26 +32,27 @@
     
     <weight n="1">
       <name>Cargo</name>
-      <weight-lb type="double">40000.0</weight-lb>
-      <max-lb type="double">80000.0</max-lb>
-      <min-lb type="double">0.0</min-lb>
+      <weight-lb type="double">80000</weight-lb>
+      <max-lb type="double">80000</max-lb>
+      <min-lb type="double">0</min-lb>
     </weight>
-        
-        
+    
+    
     <systems>
-          <autopilot>
-	    <name>Autopilot</name>
-               <path>Systems/Tu-95MR-autopilot.xml</path>
-         </autopilot>
-   </systems>
-   
-   <import>
-        <path>Huds/Sets/controls.xml</path>
-        <x-offset>-100</x-offset>
-        <y-offset>70</y-offset>
+      <autopilot>
+	<name>Autopilot</name>
+	<path>Systems/Tu-95MR-autopilot.xml</path>
+      </autopilot>
+    </systems>
+    
+    <import>
+      <path>Huds/Sets/controls.xml</path>
+      <x-offset>-100</x-offset>
+      <y-offset>70</y-offset>
     </import>    
-
-  </sim>
-
-</PropertyList>
-
+    
+    </sim>
+    
+    </PropertyList>
+    
+    

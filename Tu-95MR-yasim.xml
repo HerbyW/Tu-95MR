@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
+
+
 <!-- Tupolev Tu-95 : BARANGER Emmanuel (2011)
            Updated : F-GTUX            (2012 May)
 
@@ -12,28 +21,27 @@
      Engines         : 8 Bristol Centaurus radial engines, 2650 hp each
      Cruise speed    : 400 km/h  ( 220 kt    ) at 25000 ft
      Maximum speed   : 480 km/h  ( 260 kt    ) at 25000 ft
--->
-<!--Data added from HerbyW 05/2015, source: wikipedia
 
 Specifications (Tu-95MS)
 Right view of the Tupolev Tu-95
 Tu-95MSZ.svg
-
 Data from Combat Aircraft since 1945[27]
+
+Data added from HerbyW 05/2015, source: wikipedia
 
 Tu-95MR – Variante für die Marine zur Foto-Aufklärung. (NATO-Codename: Bear-E).
 
 General characteristics
 
-    Crew: 6–7; pilot, co pilot, flight engineer, communications system operator, navigator, tail gunner plus sometimes another navigator.[28]
-    Length: 46.2 m[29] (151 ft 6 in[29])
-    Wingspan: 50.10 m[29] (164 ft 5 in[29])
+    Crew: 6–7; pilot, co pilot, flight engineer, communications system operator, navigator, tail gunner plus sometimes another navigator
+    Length: 46.2 m (151 ft 6 in)
+    Wingspan: 50.10 m (164 ft 5 in)
     Height: 12.12 m (39 ft 9 in)
     Wing area: 310 m² (3,330 ft²)
     Empty weight: 90,000 kg (198,000 lb)
     Loaded weight: 171,000 kg (376,200 lb)
     Max. takeoff weight: 188,000 kg (414,500 lb)
-    Powerplant: 4 × Kuznetsov NK-12M turboprops, 11,000 kW (14,800 shp)[30] each
+    Powerplant: 4 × Kuznetsov NK-12M turboprops, 11,000 kW (14,800 shp) each
 
 Performance
 
@@ -48,11 +56,9 @@ Armament
 
     Radar-controlled guns: 1 or 2 × 23 mm AM-23 autocannon in tail turret.
     Missiles: Up to 15,000 kg (33,000 lb), including the Raduga Kh-20, Kh-22, and Kh-55/101/102 Air-to-surface missiles.
-
-    
     -->
 
-<airplane mass="198000">
+<airplane mass="145000" version="YASIM_VERSION_CURRENT">
 
   <approach speed="120" aoa="6" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle-v" value="0.7"/>
@@ -99,16 +105,16 @@ Armament
   <cockpit x="18.064" y="0.382" z="-1.233"/>
 
   <!-- Fuselage -->
-  <fuselage ax="21.508" ay="  0.000" az="-2.603" bx=" 17.996" by="  0.000" bz="-2.311" width="2.881" taper="0.30" midpoint="1.0"/>
-  <fuselage ax="17.996" ay="  0.000" az="-2.311" bx=" -4.503" by="  0.000" bz="-2.633" width="2.881" taper="1.00" midpoint="1.0"/>
-  <fuselage ax="-4.503" ay="  0.000" az="-2.633" bx="-21.364" by="  0.000" bz="-2.073" width="2.881" taper="0.33" midpoint="0.0"/>
+  <fuselage ax="21.508" ay="  0.000" az="-2.603" bx=" 17.996" by="  0.000" bz="-2.311" width="2.881" taper="0.15" midpoint="1.0"/>
+  <fuselage ax="17.996" ay="  0.000" az="-2.311" bx=" -9.503" by="  0.000" bz="-2.633" cx="0.1" width="2.881" taper="1.00" midpoint="0.5"/>
+  <fuselage ax="-9.503" ay="  0.000" az="-2.633" bx="-21.364" by="  0.000" bz="-2.073" cx="0.1" width="2.881" taper="0.2" midpoint="0.0"/>
 
   <!-- Engines -->
-  <fuselage ax=" 7.479" ay=" 12.319" az="-2.709" bx="  1.851" by=" 12.319" bz="-2.709" width="1.269" taper="0.90" midpoint="0.0"/>
-  <fuselage ax="10.761" ay="  6.411" az="-2.797" bx=" -3.442" by="  6.411" bz="-2.797" width="1.269" taper="0.90" midpoint="0.0"/>
+  <fuselage ax=" 7.479" ay=" 12.319" az="-2.709" bx="  1.851" by=" 12.319" bz="-2.709" cx="0.1" width="1.269" taper="0.5" midpoint="0.95"/>
+  <fuselage ax="10.761" ay="  6.411" az="-2.797" bx=" -3.442" by="  6.411" bz="-2.797" cx="0.1" width="1.269" taper="0.9" midpoint="0.5"/>
 
-  <fuselage ax="10.761" ay=" -6.411" az="-2.797" bx=" -3.442" by=" -6.411" bz="-2.797" width="1.269" taper="0.90" midpoint="0.0"/>
-  <fuselage ax=" 7.479" ay="-12.319" az="-2.709" bx="  1.851" by="-12.319" bz="-2.709" width="1.269" taper="0.90" midpoint="0.0"/>
+  <fuselage ax="10.761" ay=" -6.411" az="-2.797" bx=" -3.442" by=" -6.411" bz="-2.797" cx="0.1" width="1.269" taper="0.9" midpoint="0.5"/>
+  <fuselage ax=" 7.479" ay="-12.319" az="-2.709" bx="  1.851" by="-12.319" bz="-2.709" cx="0.1" width="1.269" taper="0.5" midpoint="0.95"/>
 
 
   <wing x="6.045" y="1.275" z="-1.937"
@@ -120,20 +126,17 @@ Armament
 	twist="-2"
         dihedral="-2.5"
         camber="0.05">
-        <stall aoa="18" width="5" peak="1.5"/>
-        <flap0 start="0.06" end="0.50" lift="1.6" drag="1.6"/>
-        <flap1 start="0.50" end="0.95" lift="1.6" drag="1.4"/>
-
+        <stall aoa="18" width="2" peak="3.5"/>
+        <flap0 start="0.10" end="0.60" lift="1.5" drag="1.3"/>
+        <flap1 start="0.75" end="1.0" lift="1.3" drag="1.1"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
-
-        <control-speed control="FLAP0" transition-time="10"/>
-        <control-speed control="FLAP1" transition-time="7"/>
+        <control-speed control="FLAP0" transition-time="12"/>
+        <control-speed control="FLAP1" transition-time="1"/>
   </wing>
 
   <!-- Elevator -->
@@ -143,15 +146,12 @@ Armament
          taper="0.40"
          dihedral="-2"
          sweep="34"
-	 camber="-0.07">
+	 camber="0.07">
          <stall aoa="18" width="5" peak="1.5"/>
-         <flap0 start="0" end="0.95" lift="1.8" drag="2.3"/>
-
+         <flap0 start="0" end="0.95" lift="1.5" drag="1.1"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
-
-         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-	 
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>	 
          <control-speed control="FLAP0" transition-time="7"/>
   </hstab>
 
@@ -162,14 +162,11 @@ Armament
          taper="0.25"
          sweep="35">
          <stall aoa="16" width="5" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.8" drag="1.5"/>
-
+         <flap0 start="0" end="1" lift="1.5" drag="1.1"/>
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
-
-         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
-	 
-         <control-speed control="FLAP0" transition-time="7"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>	 
+         <control-speed control="FLAP0" transition-time="2"/>
   </vstab>
 
   <!-- Engines   source            : http://en.wikipedia.org/wiki/Kuznetsov_NK-12
@@ -348,12 +345,12 @@ Armament
 
   <!-- Left wheels -->
   <gear x="5.239" y="6.411" z="-6.969"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -362,12 +359,12 @@ Armament
   </gear>
 
   <gear x="4.138" y="6.411" z="-6.950"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -376,12 +373,12 @@ Armament
   </gear>
 
   <gear x="3.074" y="6.411" z="-6.903"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -391,12 +388,12 @@ Armament
 
   <!-- Right wheels -->
   <gear x="5.239" y="-6.411" z="-6.969"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -405,12 +402,12 @@ Armament
   </gear>
 
   <gear x="4.138" y="-6.411" z="-6.950"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -419,12 +416,12 @@ Armament
   </gear>
 
   <gear x="3.074" y="-6.411" z="-6.903"
-        compression="1.0" 
-        retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        compression="0.5" 
+        retract-time="7" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -433,13 +430,13 @@ Armament
   </gear>
 
   <!-- Tail wheel -->
-  <gear x="-18.524" y="0" z="-3.599"
-        compression="1.0" 
+  <gear x="-15.524" y="0" z="-3.76"
+        compression="0.5" 
         retract-time="5" 
-        spring="3.0" 
-        damp="3.0" 
+        spring="0.8" 
+        damp="1.1" 
         sfric="0.9" 
-        dfric="0.7">
+        dfric="0.5">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -447,17 +444,18 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[7]/position-norm"/>
   </gear>
 
-  <tank x="4.00" y=" 5" z="-2.466" capacity="47950"/>
-  <tank x="4.00" y="-5" z="-2.466" capacity="47950"/>
-  <tank x="24.00" y=" 0" z="-2.466" capacity="47950"/>
-  <tank x="-15.00" y="0" z="-2.466" capacity="47950"/>
+  <tank x="5.00" y=" 7" z="-2.466" capacity="67950"/>
+  <tank x="5.00" y="-7" z="-2.466" capacity="67950"/>
+  <tank x="12.00" y=" 0" z="-2.466" capacity="27950"/>
+  <tank x="-6.00" y="0" z="-2.466" capacity="20950"/>
 
   <!-- Mass distribution old was CG: 4.696, 0.000, -2.812-->
-  <ballast x="-3.5" y="0" z="-2.27" mass="15000"/>
-  <ballast x="17.5" y="0" z="-2.26" mass="97000"/>
+  <ballast x="18.5" y="0" z="-2.14" mass="20000"/>
+  <ballast x="-18.5" y="0" z="-2.14" mass="-10000"/>
   
-  <weight x="16.0" y="0" z="-1.233" mass-prop="/sim/weight[0]/weight-lb"/>
-  <weight x="7.0" y="0" z="-2.26" mass-prop="/sim/weight[1]/weight-lb"/>
+ 
+  <weight x="18.0" y="0" z="-1.233" mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x="12.0" y="0" z="-2.26" mass-prop="/sim/weight[1]/weight-lb"/>
   
   <!-- Thruster for Pushback action -->
   

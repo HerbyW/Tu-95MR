@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> 
- 
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
+
 <PropertyList>
 
   <fx>
@@ -15,7 +23,7 @@
         <offset>-0.45</offset>
       </volume>
       <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
+      <max-dist>1000</max-dist>
     </crank>
     
     <crank>
@@ -28,7 +36,7 @@
         <offset>-0.45</offset>
       </volume>
       <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
+      <max-dist>1000</max-dist>
       <delay-sec>0</delay-sec>
     </crank>
     
@@ -42,7 +50,7 @@
         <offset>-0.45</offset>
       </volume>
       <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
+      <max-dist>1000</max-dist>
       <delay-sec>0</delay-sec>
     </crank>
     
@@ -56,59 +64,59 @@
         <offset>-0.45</offset>
       </volume>
       <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
+      <max-dist>1000</max-dist>
       <delay-sec>0</delay-sec>
     </crank>
   
+  <!-- Engines 1 -4 running -->
   
-    <!-- Moteur 1 -->
     <engine>
-      <name>engine</name>
+      <name>engine0</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/running.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>  
       <volume>
         <property>/engines/engine[0]/rpm</property>
-        <factor>0.00022</factor>
-        <min>0.06</min>
-        <max>0.55</max>        
+        <factor>0.00133</factor>
+        <min>0.10</min>
+        <max>1.0</max>        
       </volume>
       <pitch>
         <property>/engines/engine[0]/rpm</property>
-        <factor>0.00008</factor>
+        <factor>0.0004</factor>
         <min>0.0</min>
         <max>0.2</max>
       </pitch>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>10000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
     
     <!-- Moteur 2 -->
     <engine>
-      <name>engine</name>
+      <name>engine1</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/running.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00022</factor>
-        <min>0.06</min>
-        <max>0.55</max>        
+        <property>/engines/engine[1]/rpm</property>
+        <factor>0.00133</factor>
+        <min>0.10</min>
+        <max>1.0</max>       
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00008</factor>
+        <property>/engines/engine[1]/rpm</property>
+        <factor>0.0004</factor>
         <min>0.0</min>
         <max>0.2</max>
       </pitch>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>10000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
@@ -116,26 +124,26 @@
 
     <!-- Moteur 3 -->
     <engine>
-      <name>engine</name>
+      <name>engine2</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/running.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00022</factor>
-        <min>0.06</min>
-        <max>0.55</max>        
+        <property>/engines/engine[2]/rpm</property>
+        <factor>0.00133</factor>
+        <min>0.10</min>
+        <max>1.0</max>        
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00008</factor>
+        <property>/engines/engine[2]/rpm</property>
+        <factor>0.0004</factor>
         <min>0.0</min>
         <max>0.2</max>
       </pitch>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>10000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
@@ -143,26 +151,26 @@
 
     <!-- Moteur 4 -->
     <engine>
-      <name>engine</name>
+      <name>engine3</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/running.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00022</factor>
-        <min>0.06</min>
-        <max>0.55</max>        
+        <property>/engines/engine[3]/rpm</property>
+        <factor>0.00133</factor>
+        <min>0.10</min>
+        <max>1.0</max>       
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00008</factor>
+        <property>/engines/engine[3]/rpm</property>
+        <factor>0.0004</factor>
         <min>0.0</min>
         <max>0.2</max>
       </pitch>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>10000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
@@ -178,12 +186,12 @@
       <volume>
         <property>sim/multiplay/generic/float[12]</property>
         <type>log</type>
-        <factor>0.25</factor>
+        <factor>0.15</factor>
 	<min>0.0</min>
-        <max>0.85</max>
+        <max>0.2</max>
       </volume>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>2000</max-dist>
     </rumble>
     
     <rumble>
@@ -199,12 +207,12 @@
       <volume>
         <property>sim/multiplay/generic/float[12]</property>
         <type>log</type>
-        <factor>0.25</factor>
+        <factor>0.15</factor>
 	<min>0.0</min>
-        <max>0.85</max>
+        <max>0.2</max>
       </volume>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <max-dist>2000</max-dist>
     </rumble>
 
     <!-- Gear in and out -->
@@ -214,6 +222,9 @@
       <mode>in-transit</mode>
       <path>Aircraft/Tu-95MR/Sounds/gear.wav</path>
       <property>/gear/gear[0]/position-norm</property>
+      <volume>        
+        <max>0.55</max>
+      </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
@@ -227,6 +238,9 @@
          <value>0.96</value>
        </greater-than>
      </condition>
+     <volume>        
+        <max>0.55</max>
+      </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
@@ -299,7 +313,7 @@
       <path>Aircraft/Tu-95MR/Sounds/flaps.wav</path>
       <property>/surface-positions/flap-pos-norm</property>
       <volume>
-        <factor>0.35</factor>
+        <factor>0.25</factor>
       </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
