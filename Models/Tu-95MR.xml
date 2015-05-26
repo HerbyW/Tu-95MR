@@ -310,10 +310,74 @@
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -6.350 </z-m>
+      <z-m> -6.880 </z-m>
+      <pitch-deg>-0.3</pitch-deg>
     </offsets>
   </model>
 
+   <!-- stairs for the pilot door-->
+ <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/stairs/stairs.xml</path>
+    <offsets>
+      <x-m>  -16.50 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -7.0 </z-m>
+      <heading-deg>180.0</heading-deg>
+    </offsets>
+  </model>
+ 
+         <!-- Chokes -->
+
+<model>
+	<name>choke_nose</name>
+	<path>Aircraft/Tu-95MR/Models/Effects/ground/choke_nose.xml</path>
+	<condition>
+		<equals>
+			<property>sim/multiplay/generic/int[3]</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+	 <x-m> -0.47 </x-m>
+         <y-m> 0.0 </y-m>
+         <z-m> -0.9 </z-m>
+	</offsets>
+	
+</model>
+
+<model>
+	<name>choke_left</name>
+	<path>Aircraft/Tu-95MR/Models/Effects/ground/choke_left.xml</path>
+	<condition>
+		<equals>
+			<property>sim/multiplay/generic/int[3]</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+	 <x-m> -10.5 </x-m>
+         <y-m> -1.10 </y-m>
+         <z-m> -0.8 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>choke_right</name>
+	<path>Aircraft/Tu-95MR/Models/Effects/ground/choke_right.xml</path>
+	<condition>
+		<equals>
+			<property>sim/multiplay/generic/int[3]</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+	 <x-m> -10.5 </x-m>
+         <y-m> 1.10 </y-m>
+         <z-m> -0.8 </z-m>
+	</offsets>
+</model>
+
+  
   <!-- Interieur -->
   <model>
     <path>Aircraft/Tu-95MR/Models/Interior/interior.xml</path>

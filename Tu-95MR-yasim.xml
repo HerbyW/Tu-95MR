@@ -343,8 +343,8 @@ Armament
         <control-speed control="EXTEND" transition-time="9.7"/>
   </gear>
 
-  <!-- Left wheels -->
-  <gear x="5.239" y="6.411" z="-6.969"
+  <!-- Left wheels all 6 wheels 2m backwards to get better standing conditions-->
+  <gear x="3.239" y="6.411" z="-7"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -358,7 +358,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="4.138" y="6.411" z="-6.950"
+  <gear x="2.138" y="6.411" z="-7.125"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -372,7 +372,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
-  <gear x="3.074" y="6.411" z="-6.903"
+  <gear x="1.074" y="6.411" z="-7.25"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -387,7 +387,7 @@ Armament
   </gear>
 
   <!-- Right wheels -->
-  <gear x="5.239" y="-6.411" z="-6.969"
+  <gear x="3.239" y="-6.411" z="-7"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -401,7 +401,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
 
-  <gear x="4.138" y="-6.411" z="-6.950"
+  <gear x="2.138" y="-6.411" z="-7.125"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -415,7 +415,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[5]/position-norm"/>
   </gear>
 
-  <gear x="3.074" y="-6.411" z="-6.903"
+  <gear x="1.074" y="-6.411" z="-7.25"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 

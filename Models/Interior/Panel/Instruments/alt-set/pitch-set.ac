@@ -7,7 +7,7 @@ kids 2
 OBJECT poly
 name "pitch_nandle_base"
 loc -0.0000441 -0.1498110 -0.0631104
-texture "gray_cover.png"
+texture "base_pn-5.png"
 texrep 1 1
 numvert 34
 0.0162531 0.0067323 -0.0137439
@@ -353,7 +353,7 @@ kids 0
 OBJECT poly
 name "pitch_wheel"
 loc -0.0000441 -0.1498110 -0.0631104
-texture "gray_cover.png"
+texture "base_pn-5.png"
 texrep 1 1
 numvert 66
 0.0341555 0.0037406 -0.0054926
