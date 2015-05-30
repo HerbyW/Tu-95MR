@@ -16,7 +16,7 @@
     <author>HerbyW (FDM, animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
     
     <rating>
-      <FDM type="int">     1 </FDM>
+      <FDM type="int">     2 </FDM>
       <systems type="int"> 3 </systems>
       <cockpit type="int"> 3 </cockpit>
       <model type="int">   3 </model>
@@ -34,7 +34,7 @@
       <name>Cargo</name>
       <weight-lb type="double">80000</weight-lb>
       <max-lb type="double">80000</max-lb>
-      <min-lb type="double">0</min-lb>
+      <min-lb type="double">35000</min-lb>
     </weight>
     
     
