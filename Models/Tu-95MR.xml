@@ -717,6 +717,15 @@
       <z-m>  -3.005 </z-m>
     </offsets>
   </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise.xml</path>
+    <offsets>
+      <x-m> 10000 </x-m>
+      <y-m>    0 </y-m>
+      <z-m> -12000 </z-m>
+    </offsets>
+  </model>
 
   <!-- Les hélices --> 
   <!-- Gauche exterieur 1 -->
