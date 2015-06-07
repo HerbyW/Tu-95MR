@@ -101,10 +101,10 @@
     </particle>
 
     <program>
-      <fluid>               air  </fluid>
-      <gravity type="bool"> true </gravity>
-      <wind typ="bool">     true </wind>
-    </program>
+			<fluid>air</fluid>
+			<gravity>true</gravity>
+			<wind>true</wind>
+		</program>
 
   </particlesystem>
 
