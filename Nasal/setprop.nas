@@ -4,9 +4,6 @@
 #    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
 #    Development is ongoing, see latest version: www.github.com/HerbyW
 #    This file is licenced under the terms of the GNU General Public Licence V3 or later
-#    
-#    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-#    Eagel: Liveries
 #    ###################################################################################
 
 
@@ -47,11 +44,11 @@ setlistener("controls/paratroopers/trigger/state", func(state)
 {
   if(state.getValue())
   {
-    if(getprop("position/gear-agl-m") < 13500)
+    if(getprop("position/altitude-ft") < 44000)
     {
       jumper.switch(0);
       setprop("controls/paratroopers/trigger/state", 0);
-      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 13500 m");
+      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 44000 gt");
     }     
   }
 }

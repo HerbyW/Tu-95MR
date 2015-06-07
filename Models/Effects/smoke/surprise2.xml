@@ -87,7 +87,7 @@
 			<life-sec>
 				<value>60</value>
 			</life-sec>
-			<mass-kg>10000</mass-kg>
+			<mass-kg>400000</mass-kg>
 			<radius-m>80</radius-m>
 		</particle>
 		<program>
