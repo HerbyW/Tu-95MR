@@ -36,7 +36,7 @@
   </nasal>
 
   <sound>
-    <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound.xml</path>
+    <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound-MP.xml</path>
   </sound>
   
   <animation>    
@@ -719,7 +719,25 @@
   </model>
   
   <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise1.xml</path>
+    <offsets>
+      <x-m> 10000 </x-m>
+      <y-m>    0 </y-m>
+      <z-m> -12000 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise2.xml</path>
+    <offsets>
+      <x-m> 10000 </x-m>
+      <y-m>    0 </y-m>
+      <z-m> -12000 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise3.xml</path>
     <offsets>
       <x-m> 10000 </x-m>
       <y-m>    0 </y-m>

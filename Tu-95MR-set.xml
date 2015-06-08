@@ -8,12 +8,14 @@
     ###################################################################################
 -->
 
-<PropertyList include="Tu-95MR-yasim-cnf.xml">
+<PropertyList include="Tu-95MR-base.xml">
   
   <sim>
     
     <description>Tupolev Tu-95MR (YASim)</description>
-    <author>HerbyW (FDM, animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
+    <author>HerbyW (FDM,animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>Tu-95MR-yasim</aero>
     
     <rating>
       <FDM type="int">     2 </FDM>
@@ -25,16 +27,16 @@
     
     <weight n="0">
       <name>Crew</name>
-      <weight-lb type="double">400</weight-lb>
-      <max-lb type="double">800</max-lb>
-      <min-lb type="double">300</min-lb>
+      <weight-lb type="double">600</weight-lb>
+      <max-lb type="double">1200</max-lb>
+      <min-lb type="double">400</min-lb>
     </weight>
     
     <weight n="1">
       <name>Cargo</name>
-      <weight-lb type="double">80000</weight-lb>
-      <max-lb type="double">80000</max-lb>
-      <min-lb type="double">35000</min-lb>
+      <weight-lb type="double">80000.0</weight-lb>
+      <max-lb type="double">80000.0</max-lb>
+      <min-lb type="double">35000.0</min-lb>
     </weight>
     
     
@@ -51,8 +53,6 @@
       <y-offset>70</y-offset>
     </import>    
     
-    </sim>
+  </sim>
     
-    </PropertyList>
-    
-    
+</PropertyList>
