@@ -10,7 +10,7 @@
 
 <PropertyList>
 
-  <path>tu95-2.ac</path>
+  <path>tu95-5.ac</path>
 
   <nasal>
     <load>
@@ -39,25 +39,27 @@
     <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound-MP.xml</path>
   </sound>
   
-  <animation>    
+  <animation>
     <object-name>vitres.001</object-name>
-</animation>
-
-<animation>
-<type>noshadow</type>    
+  </animation>
+  
+  <animation>
+    <type>noshadow</type>
     <object-name>vitres.001</object-name>
-</animation>
-
-
-<animation>
-    <type>material</type>       
-       <object-name>vitres.001</object-name>      
-  <emission>
-    <factor-prop>sim/multiplay/generic/int[5]</factor-prop>
-      <red>   0.15 </red>
-      <green> 0.15 </green>
-      <blue>  0.60 </blue>
-    </emission>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+      
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres.001</object-name>
+  </effect>
+  
+  <animation>
+    <object-name>vitres.001</object-name>
 </animation>
   
  <animation>
@@ -117,10 +119,8 @@
     <object-name>axeG2</object-name>
     <object-name>axeG3</object-name>
     <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
     <object-name>roueG3</object-name>
     <object-name>axeD1</object-name>
-    <object-name>axeD2</object-name>
     <object-name>axeD3</object-name>
     <object-name>roueD1</object-name>
     <object-name>roueD2</object-name>
@@ -130,7 +130,7 @@
     <object-name>trous</object-name> 
 
     <!-- Objets transparents -->
-    <object-name>vitres.001</object-name>
+    
     <object-name>propdiscGE1</object-name>
     <object-name>propdiscGE2</object-name>
     <object-name>propdiscGI1</object-name>
@@ -206,13 +206,11 @@
     <object-name>axeG2</object-name>
     <object-name>axeG3</object-name>
     <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
     <object-name>roueG3</object-name>
     <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
     <object-name>axeD3</object-name>
     <object-name>roueD1</object-name>
-    <object-name>roueD2</object-name>
     <object-name>roueD3</object-name>
     <object-name>roueB</object-name> 
     <object-name>echappes</object-name> 
@@ -353,7 +351,7 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>vitres.001</object-name>
+    
     <object-name>propdiscGE1</object-name>
     <object-name>propdiscGE2</object-name>
     <object-name>propdiscGI1</object-name>
@@ -378,7 +376,7 @@
     <condition>
       <property>sim/rendering/rembrandt/enabled</property>
     </condition>
-    <object-name>vitres.001</object-name>
+    
     <object-name>propblurGE1</object-name>
     <object-name>propdiscGE1</object-name>
     <object-name>propblurGE2</object-name>
@@ -396,11 +394,122 @@
     <object-name>propblurDE2</object-name>
     <object-name>propdiscDE2</object-name>
   </effect>
- 
- <animation>    
-    <object-name>vitres.001</object-name>
-</animation>
   
+  <!-- Taxi lamps on front wheel-->
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/landinglightstaxi.xml</path>
+    <offsets>
+      <x-m> -17.96 </x-m>
+      <y-m>   -0.01 </y-m>
+      <z-m>  -4.5 </z-m>
+    </offsets>
+  </model>
+  <!-- Landing lamps on top -->
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/landinglights.xml</path>
+    <offsets>
+      <x-m> -18.3 </x-m>
+      <y-m>   -0.01 </y-m>
+      <z-m>  -3.75 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/TU-160-lights.xml</path>
+    <offsets>
+      <x-m> -2.35 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>  -2.15 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Lighting effects -->
+  <!-- Beacon: red-orange at top and bottom of fuselage -->
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 18.745 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> 6.612 </z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> -5.653 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -3.81 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VavLights: green-right, red-left -->
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  4.919 </x-m>
+      <y-m> -25.072 </y-m>
+      <z-m>  -2.831 </z-m>
+    </offsets>
+  </model>  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m>  4.919 </x-m>
+      <y-m>  25.072 </y-m>
+      <z-m>  -2.831 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- PositionLights: white-steady 2 on tail position, 4 on wing middle position-->
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> 21.33 </x-m>
+      <y-m> -0.314 </y-m>
+      <z-m>  -2.305 </z-m>
+    </offsets>
+  </model>
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> 21.33 </x-m>
+      <y-m> 0.314 </y-m>
+      <z-m>  -2.305 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> -4.472 </x-m>
+      <y-m> 10.557 </y-m>
+      <z-m>  -2.295 </z-m>
+    </offsets>
+  </model>  
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> -0.85 </x-m>
+      <y-m>  16.249 </y-m>
+      <z-m>  -2.492 </z-m>
+    </offsets>
+  </model>
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> -4.472 </x-m>
+      <y-m> -10.557 </y-m>
+      <z-m>  -2.295 </z-m>
+    </offsets>
+  </model>  
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> -0.85 </x-m>
+      <y-m>  -16.249 </y-m>
+      <z-m>  -2.492 </z-m>
+    </offsets>
+  </model>
 
   <!-- Une ombre pour OSG -->
   <model>
@@ -723,7 +832,7 @@
     <offsets>
       <x-m> 10000 </x-m>
       <y-m>    0 </y-m>
-      <z-m> -12000 </z-m>
+      <z-m> -10780 </z-m>
     </offsets>
   </model>
   
@@ -732,7 +841,7 @@
     <offsets>
       <x-m> 10000 </x-m>
       <y-m>    0 </y-m>
-      <z-m> -12000 </z-m>
+      <z-m> -10780 </z-m>
     </offsets>
   </model>
   
@@ -741,7 +850,7 @@
     <offsets>
       <x-m> 10000 </x-m>
       <y-m>    0 </y-m>
-      <z-m> -12000 </z-m>
+      <z-m> -10780 </z-m>
     </offsets>
   </model>
 
@@ -1484,7 +1593,7 @@
       <z2-m> -1.067 </z2-m>
     </axis>
   </animation>
-
+  
   <!-- Animation des portes des trains -->
   <animation>
     <type>rotate</type>
@@ -1770,6 +1879,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -96 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> -96 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
@@ -1784,11 +1894,28 @@
     </axis>
   </animation>
 
+    <!-- Gears select -->
+  
+  <animation>
+    <type>select</type>
+    <object-name>roueG1</object-name>
+    <object-name>roueG3</object-name>
+    <object-name>roueD1</object-name>
+    <object-name>roueD3</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>0.20</value>
+      </greater-than>
+    </condition>
+  </animation>
+  
+  
+  
   <animation>
     <name>TrainGauche</name>
     <object-name>axeG2</object-name>
     <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
     <object-name>roueG3</object-name>
   </animation>
 
@@ -1800,6 +1927,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -105 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> -105 </dep></entry>
       <entry><ind> 1 </ind><dep>    0 </dep></entry>
     </interpolation>
     <center>
@@ -1820,6 +1948,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 70 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 70 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
@@ -1840,6 +1969,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 105 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 105 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
@@ -1858,7 +1988,6 @@
     <name>TrainDroit</name>
     <object-name>axeD2</object-name>
     <object-name>roueD1</object-name>
-    <object-name>roueD2</object-name>
     <object-name>roueD3</object-name>
   </animation>
 
@@ -1870,6 +1999,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -105 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> -105 </dep></entry>
       <entry><ind> 1 </ind><dep>    0 </dep></entry>
     </interpolation>
     <center>
@@ -1890,6 +2020,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 70 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 70 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
@@ -1910,6 +2041,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 105 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 105 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
@@ -1930,6 +2062,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.64 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 0.64 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
     </interpolation>
     <axis>
@@ -1966,7 +2099,6 @@
   <animation>
     <name>TrainGauche</name>
     <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
     <object-name>roueG3</object-name>
     <object-name>axeG1</object-name>
     <object-name>axeG2</object-name>
@@ -1991,7 +2123,6 @@
   <animation>
     <name>TrainDroit</name>
     <object-name>roueD1</object-name>
-    <object-name>roueD2</object-name>
     <object-name>roueD3</object-name>
     <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
@@ -2088,23 +2219,6 @@
 
   <animation>
     <type>spin</type>
-    <object-name>roueG2</object-name>
-    <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -4.138 </x-m>
-      <y-m> -6.411 </y-m>
-      <z-m> -6.452 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
     <object-name>roueG3</object-name>
     <property>sim/multiplay/generic/float[12]</property>
     <factor> 30 </factor>
@@ -2129,23 +2243,6 @@
       <x-m> -5.239 </x-m>
       <y-m>  6.411 </y-m>
       <z-m> -6.471 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>roueD2</object-name>
-    <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -4.138 </x-m>
-      <y-m>  6.411 </y-m>
-      <z-m> -6.452 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -2184,6 +2281,24 @@
     <axis>
       <x>  0 </x>
       <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+    <!--refil and tube -->
+  
+  <animation>
+    <type>translate</type>
+    <object-name>tube</object-name>
+    <property>sim/multiplay/generic/float[16]</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>1.2</dep></entry>            
+      <entry><ind> 1 </ind><dep>0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y> 0 </y>
       <z>  0 </z>
     </axis>
   </animation>

@@ -426,6 +426,23 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
+    
+            <!-- Gear Warning -->
+ 
+    <decision>
+      <name>gearwarning</name>
+      <mode>looped</mode>
+      <path>Aircraft/Tu-95MR/Sounds/sirena.wav</path>
+      <condition>    
+      <property>/gear/warning</property>
+      </condition>
+      <volume>
+        <min>0.8</min>
+        <max>0.8</max>
+      </volume>
+      <reference-dist>10</reference-dist>
+      <max-dist>100</max-dist>
+    </decision>
  
   </fx>
  

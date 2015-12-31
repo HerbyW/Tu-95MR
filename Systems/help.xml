@@ -76,8 +76,7 @@
 		For ILS Landing you may use the HSI, it gives you the indication that ILS and/or Glide Scope is intersepted (if not, red flags comming up).
 		ILS heading works even far out the stream, for the glidscope you should wait till the indicator is in nearly horizontal position (yellow line).
 		
-		Flaps Controll Panel will give you the right level for landing (on the right side) and starting (on the left side), if the white strips are in the
-		middle position (1-2 for starting, 2-4 for landing).
+		Flaps Controll Panel with 5 Steps (1-2 for starting, 2-4 for landing without payload).
 		
 		Trails are now working only above 14000 ft, on ground it is not realistic.
 		
@@ -93,6 +92,8 @@
 		Maximal start weight is: 415500 lb. There is a warning light for overload on top of the compasses (sign: BEC).
 		
 		Radios, DMEs, ADFs and Kurs (ILS) Instruments are fully working and can be set in the Engineer-Panel.
+		
+		AAR (aerial refueling) is now implemented, open the refill-probe with the switch on the right and go behind a tanker aircraft (in AI- and MP-modus).
 		
 		Rembrandt ready! Also everything is working fine without Rembrandt. ALS lights are also implemented.
 		

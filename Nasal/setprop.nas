@@ -44,11 +44,11 @@ setlistener("controls/paratroopers/trigger/state", func(state)
 {
   if(state.getValue())
   {
-    if(getprop("position/altitude-ft") < 44000)
+    if(getprop("position/altitude-ft") < 40000)
     {
       jumper.switch(0);
       setprop("controls/paratroopers/trigger/state", 0);
-      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 44000 gt");
+      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 40000 ft");
     }     
   }
 }
@@ -251,7 +251,7 @@ setlistener("controls/gear/gear-down", func
  {
  var down = props.globals.getNode("controls/gear/gear-down").getBoolValue();
  var crashed = getprop("sim/crashed") or 0;
- if (!down and (getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow")))
+ if (!down and (getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[7]/wow")))
   {
     if(!crashed){
   		props.globals.getNode("controls/gear/gear-down").setBoolValue(1);
@@ -260,7 +260,25 @@ setlistener("controls/gear/gear-down", func
     }
   }
  });
- 
+
+var gearstate = 0;
+setlistener("gear/gear/position-norm", func
+  { if (getprop("gear/gear/position-norm") == 1)
+    { gearstate = 0 ;}
+    if (getprop("gear/gear/position-norm") < 1)
+    { gearstate = 1 ;}
+    if (getprop("gear/gear/position-norm") == 0)
+    { gearstate = 0 ;}
+    setprop("gear/state", gearstate)
+  }
+);
+
+setlistener("position/gear-agl-m", func
+  {
+    if ((getprop("gear/gear/position-norm") == 0) and (getprop("position/gear-agl-m") < 100))
+    {setprop("gear/warning", 1);}
+      else setprop("gear/warning", 0)
+  });
 
 
 #############################################################################################################
@@ -456,9 +474,9 @@ return value;
 
 var adjustAlt = func(amount,step=100){
 
-var value = getprop("/autopilot/setting/target-altitude-ft");
+var value = getprop("/autopilot/settings/target-altitude-ft");
 value = adjustStep(value,amount,100);
-setprop("/autopilot/setting/target-altitude-ft",value);
+setprop("/autopilot/settings/target-altitude-ft",value);
 
 
 };
