@@ -414,18 +414,29 @@
     </rain>
     
  
-    <stall>
-      <name>stall</name>
-      <mode>looped</mode>
-      <path>Sounds/stall.wav</path>
-      <property>/sim/alarms/stall-warning</property>
-      <volume>
-        <property>/sim/alarms/stall-warning</property>
-        <max>1.0</max>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </stall>
+  <!-- Stall -->
+ 
+ <stall>
+   <name>stall</name>
+   <mode>looped</mode>
+   <path>Aircraft/Tu-95MR/Sounds/stall.wav</path>
+   <condition>
+     <and>
+       <property>instrumentation/alerts/stall</property>
+       <greater-than>
+	 <property>sim/time/elapsed-sec</property>
+	 <value>100</value>
+       </greater-than>
+     </and>
+   </condition>    
+   <volume>
+     <property>instrumentation/alerts/stall</property>
+     <max>1.0</max>
+   </volume>
+   <reference-dist>10</reference-dist>
+   <max-dist>100</max-dist>
+ </stall>
+    
     
             <!-- Gear Warning -->
  

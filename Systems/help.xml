@@ -13,19 +13,23 @@
   
       <title>Tupolev Tu-95MR Bear-D</title>
       
-  <key>
-    <name>s</name>
-    <desc>Autostart</desc>
-  </key>
-  
-  <key>
-    <name>Delete</name>
-    <desc>Reverser on/off</desc>
-  </key>
-  <key>
-    <name>&lt;</name>
-    <desc>Change Pilot Engineer View</desc>
-  </key>
+      <key>
+	<name>s</name>
+	<desc>Autostart</desc>
+      </key>
+      
+      <key>
+	<name>Delete</name>
+	<desc>Reverser on/off</desc>
+      </key>
+      <key>
+	<name>&lt;</name>
+	<desc>Change Pilot Engineer View</desc>
+      </key>
+      <key>
+	<name>e</name>
+	<desc>Cargo Door open/close</desc>
+      </key>
   
   <text>Welcome to Tupolev Tu-95MR Bear-D by HerbyW
     
@@ -55,7 +59,8 @@
 		There is a 3 knob panel at the left side, marker volume, instrument lights and for rembrandt - cabin lights.
 		
 		The switch right from the Lights panel is for landing and taxi lights.
-		Then there is the switch for activating the parachuters and a switch for the cargo door.
+		Then there is the switch for activating the parachuters (not used) and a switch for the cargo door.
+		Open the cargo door (key "e" or use the switch) to launch a nuclear cruise missle, you should be at 40000 ft, it will explode 20 km behind of you.
 		Right from the Parachuters-switch is a switch for the new ALS lights, they are working only without Rembrandt and also not over the MP-modus.
 		
 		On the very left side you have a panel with 5 green lamps, the lower 3 are for trim-neutralisation, used after the Autopilot is dissabled.

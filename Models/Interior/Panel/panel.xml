@@ -147,16 +147,18 @@
     </offsets>
   </model>
   
-  <!-- AI2, Artificial Horizont -->
-    
+  <!-- UAP-12, AOA indicator --> 
+  
   <model>
-    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/uap-12/uap-12.xml</path>
     <offsets>
       <x-m> 0.002 </x-m>
-      <y-m> -0.40 </y-m>
-      <z-m> -0.105 </z-m>
+      <y-m> -0.395 </y-m>
+      <z-m> -0.085 </z-m>
     </offsets>
   </model>
+  
+  <!-- AI2, Artificial Horizont -->
 
   <model>
     <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
@@ -1843,6 +1845,17 @@ Door</text>
       <blue>  0.6 </blue>
     </emission>
   </animation>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/red-lamp-cargodoor.xml</path>
+    <offsets>
+      <x-m>  -0.015 </x-m>
+      <y-m>  0.026 </y-m>
+      <z-m>  0.223 </z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
    
   
  <!-- Paratroopers Switch Text--> 

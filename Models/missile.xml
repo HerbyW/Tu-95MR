@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    ###################################################################################
+    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Development is ongoing, see latest version: www.github.com/HerbyW
+    This file is licenced under the terms of the GNU General Public Licence V3 or later    
+    ###################################################################################
+-->
+
+<PropertyList>
+
+  <path>missile.ac</path>
+
+  <!--bomb dropping -->
+  
+  <animation>
+    <type>select</type>
+    <object-name>Bomb1</object-name>    
+    <condition>
+      <greater-than>
+        <property>sim/multiplay/generic/float[17]</property>
+        <value>1</value>
+      </greater-than>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>Bomb1</object-name>
+    <property>sim/multiplay/generic/float[17]</property>
+    <factor>-1.7</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+  </animation> 
+  
+  <animation>
+    <type>translate</type>
+    <object-name>Bomb1</object-name>
+    <property>sim/multiplay/generic/float[17]</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>      
+      <entry><ind> 20 </ind><dep> 0</dep></entry>      
+      <entry><ind> 360 </ind><dep>-6000</dep></entry>      
+    </interpolation>
+    <axis>
+      <x> -1.0</x>
+      <y> 0.0</y>
+      <z> 0.0</z>
+    </axis>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m>-0.0</z-m>
+    </center>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Bomb1</object-name>
+    <property>sim/multiplay/generic/float[17]</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>      
+      <entry><ind> 20 </ind><dep> 0</dep></entry>
+      <entry><ind> 80 </ind><dep> 180</dep></entry>      
+      <entry><ind> 120 </ind><dep>180</dep></entry>
+      <entry><ind> 360 </ind><dep>180</dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m>-0.0</z-m>
+    </center>
+  </animation>
+
+</PropertyList>
+

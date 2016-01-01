@@ -27,7 +27,16 @@
 		<texture>surprisea.png</texture>
 		
 		<condition>
-		  <property>sim/multiplay/generic/int[2]</property>
+		  <and>
+		  <greater-than>
+		    <property>sim/multiplay/generic/float[17]</property>
+		    <value>258</value>
+		  </greater-than>
+		  <less-than>
+		    <property>sim/multiplay/generic/float[17]</property>
+		    <value>270</value>
+		  </less-than>
+		  </and>
 		</condition>
 		
 		<emissive>false</emissive>

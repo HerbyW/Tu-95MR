@@ -48,7 +48,7 @@ setlistener("controls/paratroopers/trigger/state", func(state)
     {
       jumper.switch(0);
       setprop("controls/paratroopers/trigger/state", 0);
-      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 40000 ft");
+      setprop("sim/messages/copilot", "We have no paratroopers on board");
     }     
   }
 }
@@ -280,6 +280,30 @@ setlistener("position/gear-agl-m", func
       else setprop("gear/warning", 0)
   });
 
+########################################################################################################
+# Cargo Door Control
+#
+#controls/cargodoor/signal
+#  {
+
+
+setlistener("controls/cargodoor/signal", func
+
+{ 
+  setprop("sim/messages/copilot", "Cargo Door is moving!");
+  doors.cargo.toggle()
+});
+
+# bomb dropping
+
+setlistener("controls/cargodoor/signal", func(v)
+{
+  if(v.getValue() == 1)
+  interpolate("/sim/model/bomb/position-norm", 0.1, 3, 30, 6, getprop("position/gear-agl-m"), getprop("position/gear-agl-m")/9.81 );
+  else {
+  if(v.getValue() == 0)
+  interpolate("/sim/model/bomb/position-norm", 0, 0 ); }
+});
 
 #############################################################################################################
 #
