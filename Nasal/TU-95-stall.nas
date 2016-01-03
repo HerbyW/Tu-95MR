@@ -11,9 +11,10 @@ var warning = func {
   ## get variables
   var aoa = getprop("orientation/alpha-deg");
   var flaps = getprop("controls/flight/flaps") * -4;
+  var gear = getprop("controls/gear/gear-down") * -0.75;
   var stalling = "false";
   var gearalt = getprop("position/gear-agl-ft");
-  var aoaStall = (7 + flaps);
+  var aoaStall = (7 + flaps + gear);
 ## compare and set warning
   if ((aoa!=nil) and (flaps!=nil))
     {

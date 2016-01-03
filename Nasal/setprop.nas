@@ -524,3 +524,16 @@ setlistener("/sim/airport/closest-airport-id", func
 }
 );
 
+########################################################################################################
+
+# Flaps Control with speed limits
+# prevent demage of flaps due to speed
+
+setlistener("controls/flight/flaps", func
+ { 
+ if ((getprop("controls/flight/flaps") > 0  ) and (getprop("velocities/groundspeed-kt") > 280  ))
+  {
+    setprop("controls/flight/flaps", 0);
+    setprop("sim/messages/copilot", "Do you want to destroy the flaps due to overspeed????");    
+  }
+});
