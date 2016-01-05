@@ -534,7 +534,22 @@
       <z-m>  -2.492 </z-m>
     </offsets>
   </model>
-
+  
+    <!--Internal Cabin lights for Rembrand, switch: bano-->
+ <model>
+  <path>Aircraft/Tu-95MR/Models/light/headlight-tiny.xml</path>
+  <name>tiny</name>
+   <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <offsets>
+      <x-m>-12.3</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.3</z-m>
+   <pitch-deg>90</pitch-deg>
+  </offsets>
+ </model>  
+  
   <!-- Une ombre pour OSG -->
   <model>
     <name>shadowOSG</name>
