@@ -44,11 +44,11 @@ setlistener("controls/paratroopers/trigger/state", func(state)
 {
   if(state.getValue())
   {
-    if(getprop("position/altitude-ft") < 44000)
+    if(getprop("position/altitude-ft") < 40000)
     {
       jumper.switch(0);
       setprop("controls/paratroopers/trigger/state", 0);
-      setprop("sim/messages/copilot", "Bomb can not be dropped, climb to 44000 gt");
+      setprop("sim/messages/copilot", "We have no paratroopers on board");
     }     
   }
 }
@@ -251,7 +251,7 @@ setlistener("controls/gear/gear-down", func
  {
  var down = props.globals.getNode("controls/gear/gear-down").getBoolValue();
  var crashed = getprop("sim/crashed") or 0;
- if (!down and (getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow")))
+ if (!down and (getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[7]/wow")))
   {
     if(!crashed){
   		props.globals.getNode("controls/gear/gear-down").setBoolValue(1);
@@ -260,8 +260,50 @@ setlistener("controls/gear/gear-down", func
     }
   }
  });
- 
 
+var gearstate = 0;
+setlistener("gear/gear/position-norm", func
+  { if (getprop("gear/gear/position-norm") == 1)
+    { gearstate = 0 ;}
+    if (getprop("gear/gear/position-norm") < 1)
+    { gearstate = 1 ;}
+    if (getprop("gear/gear/position-norm") == 0)
+    { gearstate = 0 ;}
+    setprop("gear/state", gearstate)
+  }
+);
+
+setlistener("position/gear-agl-m", func
+  {
+    if ((getprop("gear/gear/position-norm") == 0) and (getprop("position/gear-agl-m") < 100))
+    {setprop("gear/warning", 1);}
+      else setprop("gear/warning", 0)
+  });
+
+########################################################################################################
+# Cargo Door Control
+#
+#controls/cargodoor/signal
+#  {
+
+
+setlistener("controls/cargodoor/signal", func
+
+{ 
+  setprop("sim/messages/copilot", "Cargo Door is moving!");
+  doors.cargo.toggle()
+});
+
+# bomb dropping
+
+setlistener("controls/cargodoor/signal", func(v)
+{
+  if(v.getValue() == 1)
+  interpolate("/sim/model/bomb/position-norm", 0.1, 3, 30, 6, getprop("position/gear-agl-m"), getprop("position/gear-agl-m")/9.81 );
+  else {
+  if(v.getValue() == 0)
+  interpolate("/sim/model/bomb/position-norm", 0, 0 ); }
+});
 
 #############################################################################################################
 #
@@ -456,9 +498,9 @@ return value;
 
 var adjustAlt = func(amount,step=100){
 
-var value = getprop("/autopilot/setting/target-altitude-ft");
+var value = getprop("/autopilot/settings/target-altitude-ft");
 value = adjustStep(value,amount,100);
-setprop("/autopilot/setting/target-altitude-ft",value);
+setprop("/autopilot/settings/target-altitude-ft",value);
 
 
 };
@@ -482,3 +524,16 @@ setlistener("/sim/airport/closest-airport-id", func
 }
 );
 
+########################################################################################################
+
+# Flaps Control with speed limits
+# prevent demage of flaps due to speed
+
+setlistener("controls/flight/flaps", func
+ { 
+ if ((getprop("controls/flight/flaps") > 0  ) and (getprop("velocities/groundspeed-kt") > 280  ))
+  {
+    setprop("controls/flight/flaps", 0);
+    setprop("sim/messages/copilot", "Do you want to destroy the flaps due to overspeed????");    
+  }
+});

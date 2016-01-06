@@ -51,5 +51,14 @@
   </binding>
 </key>
 
+<key n="101">
+    <name>e</name>
+    <desc>Cargo Door</desc>
+    <binding>
+        <command>property-toggle</command>
+        <property>controls/cargodoor/signal</property>
+      </binding>   
+  </key>
+
 </PropertyList>
 

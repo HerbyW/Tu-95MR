@@ -20,10 +20,10 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <pitch-offset-deg>-5</pitch-offset-deg>
+      <pitch-offset-deg>-8</pitch-offset-deg>
       <x-offset-m archive="y">   0.412 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -1.257 </y-offset-m> <!-- Up    -->
-      <z-offset-m archive="y"> -18.046 </z-offset-m> <!-- Back  -->
+      <y-offset-m archive="y">  -1.30 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -17.65 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -5 </pitch-offset-deg>
       <default-field-of-view-deg> 75 </default-field-of-view-deg>
     </config>
@@ -40,8 +40,8 @@
       <x-offset-m archive="y">   0.75 </x-offset-m> <!-- Right -->
       <y-offset-m archive="y">  -1.68 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -16.55 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg> -2 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 80 </default-field-of-view-deg>
+      <pitch-offset-deg> 1 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 85 </default-field-of-view-deg>
       <heading-offset-deg type="double">180 </heading-offset-deg>
     </config>
   </view>

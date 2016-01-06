@@ -40,13 +40,15 @@
     </emission>
 </animation>
 
-
+<!--Controls 1=CargoDoor 2=Parachutes 3=ALS Lights-->
 <animation>
   <type>rotate</type>
   <object-name>handle_1</object-name>
   <property>sim/multiplay/generic/float[13]</property>  
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-60.0</dep></entry>
+    <entry><ind>	0.05</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	0.95</ind>	<dep>	0.0</dep></entry>    
     <entry><ind>	1.0</ind>	<dep>	60.0</dep></entry>
   </interpolation>
   <axis>
@@ -85,35 +87,33 @@
 </animation>
 
 <!--Control-->
+<!--Controls Cargo Door -->
 <animation>
   <type>pick</type>
   <object-name>hotspot_1</object-name>
   <visible>false</visible>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("sim/multiplay/generic/float[13]", 1.0, 2.0 );
-      </script>
-    </binding>
-  </action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/cargodoor/signal</property>
+      </binding>
+    </action>
 </animation>
+
 <animation>
   <type>pick</type>
   <object-name>hotspot_2</object-name>
   <visible>false</visible>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("sim/multiplay/generic/float[13]", 0.0, 2.0 );
-      </script>
-    </binding>
-  </action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/cargodoor/signal</property>
+      </binding>
+    </action>
 </animation>
 
 <animation>

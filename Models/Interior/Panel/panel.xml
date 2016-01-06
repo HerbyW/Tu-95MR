@@ -147,16 +147,18 @@
     </offsets>
   </model>
   
-  <!-- AI2, Artificial Horizont -->
-    
+  <!-- UAP-12, AOA indicator --> 
+  
   <model>
-    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/uap-12/uap-12.xml</path>
     <offsets>
       <x-m> 0.002 </x-m>
-      <y-m> -0.40 </y-m>
-      <z-m> -0.105 </z-m>
+      <y-m> -0.395 </y-m>
+      <z-m> -0.085 </z-m>
     </offsets>
   </model>
+  
+  <!-- AI2, Artificial Horizont -->
 
   <model>
     <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
@@ -400,7 +402,7 @@
   <!-- Gear Indicator -->
   
   <model>
-    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/Gear_ind/gear_ind2.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/gear-warning/ind_14.xml</path>
     <offsets>
       <x-m>  0.008 </x-m>
       <y-m> -0.060 </y-m>
@@ -1730,6 +1732,72 @@ Lights</text>
     </emission>
   </animation>
   
+    <!-- Refilling -->
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/bano/azs4-7.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m> 0.20 </y-m>
+      <z-m>  0.200 </z-m>
+    </offsets>
+  </model>  
+  
+  <text>
+    <name>Refilling</name>
+    <type type="string">literal</type>
+    <text type="string">Refill</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.008</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.04</max-height>
+    <max-width>0.025</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m>  0.195 </y-m>
+      <z-m>  0.170 </z-m>
+    </offsets>
+  </text>
+ 
+ <animation>
+    <type>material</type>    
+    <object-name>Refilling</object-name>    
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  </animation>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/green-lamp-refil.xml</path>
+    <offsets>
+      <x-m>  -0.015 </x-m>
+      <y-m>  0.184 </y-m>
+      <z-m>  0.223 </z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/green-lamp-refil2.xml</path>
+    <offsets>
+      <x-m>  -0.015 </x-m>
+      <y-m>  0.206 </y-m>
+      <z-m>  0.223 </z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  
    <!-- Light switches block 2 -->
   
   <model>
@@ -1777,6 +1845,17 @@ Door</text>
       <blue>  0.6 </blue>
     </emission>
   </animation>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/red-lamp-cargodoor.xml</path>
+    <offsets>
+      <x-m>  -0.015 </x-m>
+      <y-m>  0.026 </y-m>
+      <z-m>  0.223 </z-m>
+      <heading-deg>0</heading-deg>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
    
   
  <!-- Paratroopers Switch Text--> 
@@ -2131,5 +2210,38 @@ SKAWK</text>
     </offsets>
   </model>
  
-
+  <!-- Version Number -->
+  
+  <text>
+        <name>Version</name>
+        <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.737 </y-m>
+      <z-m>  0.15 </z-m>
+    </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <property type="string">sim/multiplay/generic/string[1]</property>
+        <format type="string">%.7s</format>
+        <font>arial_black.txf</font>
+        <character-size>0.01</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+  </text>
+    
+    <animation>
+        <type>material</type>
+         <object-name>Version</object-name>         
+        <emission>
+            <red>0.35</red>
+            <green>0.35</green>
+            <blue>0.50</blue>
+        </emission>        
+    </animation>
+ 
+ 
 </PropertyList>
