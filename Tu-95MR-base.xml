@@ -62,12 +62,12 @@
     </controls>
     
     <gear><gear><position-norm type="float">1</position-norm></gear></gear>
-    
+    <scenery><share-events type="bool">true</share-events></scenery>
     
     <sim include="Systems/views.xml">
       
       <author>HerbyW (FDM,3D, animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
-      <aircraft-version>1.1.4</aircraft-version>
+      <aircraft-version>1.2.0</aircraft-version>
       <status>Alpha</status>
       
       <fuel-fraction>0.8</fuel-fraction>
@@ -84,7 +84,7 @@
 	<door-positions>
           <refil><position-norm type="double">0</position-norm></refil>
         </door-positions>
-	<Tu-95MR><version type="string">1.1.4</version></Tu-95MR>
+	<Tu-95MR><version type="string">1.2.0</version></Tu-95MR>
       </model>
       
       <sound>
