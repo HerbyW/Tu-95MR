@@ -328,7 +328,7 @@
       <path>Aircraft/Tu-95MR/Sounds/dinamik_pr2.wav</path>
        <condition>
         <greater-than>
-	 <property>intrumentation/airspeed-indicator/true-speed-kt</property>
+	 <property>instrumentation/airspeed-indicator/true-speed-kt</property>
 	 <value>510</value>
          </greater-than>
         </condition> 
