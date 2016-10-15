@@ -66,8 +66,8 @@
     
     <sim include="Systems/views.xml">
       
-      <author>HerbyW (FDM,3D, animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
-      <aircraft-version>1.2.0</aircraft-version>
+      <author>Herbert Wagner (FDM,3D, animations), Baranger E.(3D/FDM)/F-GTUX(FDM)</author>
+      <aircraft-version>1.2.1</aircraft-version>
       <status>Alpha</status>
       
       <fuel-fraction>0.8</fuel-fraction>
@@ -84,7 +84,7 @@
 	<door-positions>
           <refil><position-norm type="double">0</position-norm></refil>
         </door-positions>
-	<Tu-95MR><version type="string">1.2.0</version></Tu-95MR>
+	<Tu-95MR><version type="string">1.2.1</version></Tu-95MR>
       </model>
       
       <sound>

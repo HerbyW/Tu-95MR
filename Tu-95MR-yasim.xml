@@ -56,6 +56,24 @@ Armament
 
     Radar-controlled guns: 1 or 2 × 23 mm AM-23 autocannon in tail turret.
     Missiles: Up to 15,000 kg (33,000 lb), including the Raduga Kh-20, Kh-22, and Kh-55/101/102 Air-to-surface missiles.
+    
+    YASim solution results:
+       Iterations: 2434
+ Drag Coefficient: 3.48779
+       Lift Ratio: 616.58
+       Cruise AoA: 0.490284
+   Tail Incidence: -4.27163
+Approach Elevator: -0.116204
+            CG: 1.449, 0.000, -1.831
+            
+            YASim solution results:
+       Iterations: 2639
+ Drag Coefficient: 3.14117
+       Lift Ratio: 630.436
+       Cruise AoA: 0.681459
+   Tail Incidence: -4.67765
+Approach Elevator: -0.110281
+            CG: 1.449, 0.000, -1.831
     -->
 
 <airplane mass="145000" version="YASIM_VERSION_CURRENT">
@@ -77,7 +95,7 @@ Armament
     <control-setting axis="/controls/engines/engine[3]/condition" value="1"/>
     <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0"/>
 
-    <control-setting axis="/controls/flight/flaps" value="0.5"/>
+    <control-setting axis="/controls/flight/flaps" value="0.7"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
@@ -148,7 +166,7 @@ Armament
          sweep="34"
 	 camber="0.07">
          <stall aoa="18" width="8" peak="1.5"/>
-         <flap0 start="0" end="0.95" lift="1.9" drag="1.1"/>
+         <flap0 start="0" end="0.95" lift="1.5" drag="1.1"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>	 
@@ -194,6 +212,7 @@ Armament
 	     manual="true"
 	     contra="1">
     <actionpt x="8.228" y="12.321" z="-2.709"/>
+    <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
     <turbine-engine eng-power="15990"
 		    eng-rpm="750"
 		    alt="22000"
@@ -201,22 +220,15 @@ Armament
 		    n2-high-idle="65"
 		    n2-max="100"
 		    flat-rating="15990"
-		    bsfc="0.45">
+		    bsfc="0.36">
       </turbine-engine>
-      <control-input axis="/controls/engines/engine[0]/throttle-v" control="THROTTLE"/>
-      <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-      <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-      <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
-      <control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>
-      
-      <control-output control="ADVANCE" prop="/engines/engine[0]/propeller-pitch"/>
-      
-      <control-speed control="THROTTLE" transition-time="10"/>   
+      <control-input axis="/controls/engines/engine[0]/throttle-v" control="THROTTLE"/>      
+      <control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>    
       </propeller>
       
       <!-- Left interior -->
       <propeller x="9.469" y="6.411" z="-2.797"
-		 radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
@@ -232,6 +244,7 @@ Armament
 	     manual="true"
 	     contra="1">
 	<actionpt x="11.510" y="6.411" z="-2.797"/>
+	<control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
 	<turbine-engine eng-power="15990"
 		 eng-rpm="750"
 		 alt="22000"
@@ -239,22 +252,15 @@ Armament
 		 n2-high-idle="65"
 		 n2-max="100"
 		 flat-rating="15990"
-		 bsfc="0.45">
+		 bsfc="0.36">
 	  </turbine-engine>
 	  <control-input axis="/controls/engines/engine[1]/throttle-v" control="THROTTLE"/>
-	  <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
-	  <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-	  <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
-	  <control-input axis="/controls/engines/engine[1]/condition" control="CONDLEVER"/>
-	  
-	  <control-output control="ADVANCE" prop="/engines/engine[1]/propeller-pitch"/>
-	  
-	  <control-speed control="THROTTLE" transition-time="10"/>   
+	  <control-input axis="/controls/engines/engine[1]/condition" control="CONDLEVER"/>     
 	  </propeller>
 	  
 	  <!-- Right interior (engine left) -->
 	  <propeller x="9.469" y="-6.411" z="-2.797"
-	      radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
@@ -270,6 +276,7 @@ Armament
 	     manual="true"
 	     contra="1">
 	    <actionpt x="11.510" y="-6.411" z="-2.797"/>
+	    <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
 	    <turbine-engine eng-power="15990"
 		     eng-rpm="750"
 		     alt="22000"
@@ -277,22 +284,15 @@ Armament
 		     n2-high-idle="65"
 		     n2-max="100"
 		     flat-rating="15990"
-		     bsfc="0.45">
+		     bsfc="0.36">
 	      </turbine-engine>
-	      <control-input axis="/controls/engines/engine[2]/throttle-v" control="THROTTLE"/>
-	      <control-input axis="/controls/engines/engine[2]/starter" control="STARTER"/>
-	      <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
-	      <control-input axis="/controls/engines/engine[2]/propeller-feather" control="PROPFEATHER"/>
-	      <control-input axis="/controls/engines/engine[2]/condition" control="CONDLEVER"/>
-	      
-	      <control-output control="ADVANCE" prop="/engines/engine[2]/propeller-pitch"/>
-	      
-	      <control-speed control="THROTTLE" transition-time="10"/>   
+	      <control-input axis="/controls/engines/engine[2]/throttle-v" control="THROTTLE"/>      
+	      <control-input axis="/controls/engines/engine[2]/condition" control="CONDLEVER"/>        
 	      </propeller>
 	      
 	      <!-- Right exterior (engine left) -->
 	      <propeller x="6.188" y="-12.312" z="-2.709"
-		  radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
@@ -308,6 +308,7 @@ Armament
 	     manual="true"
 	     contra="1">
 		<actionpt x="8.228" y="-12.321" z="-2.709"/>
+		<control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
 		<turbine-engine eng-power="15990"
 		  eng-rpm="750"
 		  alt="22000"
@@ -315,17 +316,10 @@ Armament
 		  n2-high-idle="65"
 		  n2-max="100"
 		  flat-rating="15990"
-		  bsfc="0.45">
+		  bsfc="0.36">
 		  </turbine-engine>
-		  <control-input axis="/controls/engines/engine[3]/throttle-v" control="THROTTLE"/>
-		  <control-input axis="/controls/engines/engine[3]/starter" control="STARTER"/>
-		  <control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
-		  <control-input axis="/controls/engines/engine[3]/propeller-feather" control="PROPFEATHER"/>
-		  <control-input axis="/controls/engines/engine[3]/condition" control="CONDLEVER"/>
-		  
-		  <control-output control="ADVANCE" prop="/engines/engine[3]/propeller-pitch"/>
-		  
-		  <control-speed control="THROTTLE" transition-time="10"/>   
+		  <control-input axis="/controls/engines/engine[3]/throttle-v" control="THROTTLE"/>  
+		  <control-input axis="/controls/engines/engine[3]/condition" control="CONDLEVER"/>   
 		  </propeller>
 		  
   <!-- Nose wheel -->
@@ -333,7 +327,9 @@ Armament
         compression="0.5" 
         retract-time="5" 
         spring="3.0" 
-        damp="1.35">
+        damp="1.35"
+        sfric="0.9" 
+        dfric="0.6">
         <control-input axis="/controls/flight/rudder" control="STEER"
     src0="-1.0" dst0="-0.8052" src1="1.0" dst1="0.8052" square="true"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>        
