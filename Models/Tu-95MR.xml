@@ -550,7 +550,7 @@
   </offsets>
  </model>  
   
-  <!-- Une ombre pour OSG -->
+  <!-- Une ombre pour OSG
   <model>
     <name>shadowOSG</name>
     <path>Aircraft/Tu-95MR/Models/shadow.xml</path>
@@ -561,7 +561,7 @@
       <pitch-deg>-0.3</pitch-deg>
     </offsets>
   </model>
-
+ -->
    <!-- stairs for the pilot door-->
  <model>
     <path>Aircraft/Tu-95MR/Models/Effects/stairs/stairs.xml</path>
@@ -665,15 +665,6 @@
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/ground/ground2.xml</path>
     <offsets>
-      <x-m> -4.138 </x-m>
-      <y-m> -6.411 </y-m>
-      <z-m> -6.950 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground3.xml</path>
-    <offsets>
       <x-m> -3.074 </x-m>
       <y-m> -6.411 </y-m>
       <z-m> -6.903 </z-m>
@@ -682,7 +673,7 @@
 
   <!-- Roue droite -->
   <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground4.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground3.xml</path>
     <offsets>
       <x-m> -5.239 </x-m>
       <y-m>  6.411 </y-m>
@@ -691,16 +682,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground5.xml</path>
-    <offsets>
-      <x-m> -4.138 </x-m>
-      <y-m>  6.411 </y-m>
-      <z-m> -6.950 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground6.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground4.xml</path>
     <offsets>
       <x-m> -3.074 </x-m>
       <y-m>  6.411 </y-m>
@@ -710,7 +692,7 @@
 
   <!-- Roulette de queue -->
   <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground7.xml</path>
+    <path>Aircraft/Tu-95MR/Models/Effects/ground/ground5.xml</path>
     <offsets>
       <x-m> 15.524 </x-m>
       <y-m>  0.000 </y-m>
@@ -723,17 +705,8 @@
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/trail/trailL1.xml</path>
     <offsets>
-      <x-m>  -4.540 </x-m>
-      <y-m> -12.794 </y-m>
-      <z-m>  -3.005 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/trail/trailL1.xml</path>
-    <offsets>
-      <x-m>  -4.540 </x-m>
-      <y-m> -11.844 </y-m>
+      <x-m>  16.540 </x-m>
+      <y-m> -12.319 </y-m>
       <z-m>  -3.005 </z-m>
     </offsets>
   </model>
@@ -741,17 +714,8 @@
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/trail/trailL2.xml</path>
     <offsets>
-      <x-m> -7.813 </x-m>
-      <y-m> -6.939 </y-m>
-      <z-m> -3.168 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/trail/trailL2.xml</path>
-    <offsets>
-      <x-m> -7.813 </x-m>
-      <y-m> -5.882 </y-m>
+      <x-m> 13.813 </x-m>
+      <y-m> -6.41 </y-m>
       <z-m> -3.168 </z-m>
     </offsets>
   </model>
@@ -759,17 +723,8 @@
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/trail/trailR1.xml</path>
     <offsets>
-      <x-m> -7.813 </x-m>
-      <y-m>  6.939 </y-m>
-      <z-m> -3.168 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/trail/trailR1.xml</path>
-    <offsets>
-      <x-m> -7.813 </x-m>
-      <y-m>  5.882 </y-m>
+      <x-m> 13.813 </x-m>
+      <y-m>  6.41 </y-m>
       <z-m> -3.168 </z-m>
     </offsets>
   </model>
@@ -777,17 +732,8 @@
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/trail/trailR2.xml</path>
     <offsets>
-      <x-m>  -4.540 </x-m>
-      <y-m>  12.794 </y-m>
-      <z-m>  -3.005 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Effects/trail/trailR2.xml</path>
-    <offsets>
-      <x-m>  -4.540 </x-m>
-      <y-m>  11.844 </y-m>
+      <x-m>  16.540 </x-m>
+      <y-m>  12.319 </y-m>
       <z-m>  -3.005 </z-m>
     </offsets>
   </model>
@@ -865,6 +811,45 @@
       <z-m>  -3.005 </z-m>
     </offsets>
   </model>
+  
+  <!--reverse-->
+    <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/smoke_1r.xml</path>
+    <offsets>
+      <x-m>  -4.540 </x-m>
+      <y-m> -12.319 </y-m>
+      <z-m>  -3.005 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/smoke_2r.xml</path>
+    <offsets>
+      <x-m> -7.813 </x-m>
+      <y-m> -6.41 </y-m>
+      <z-m> -3.168 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/smoke_3r.xml</path>
+    <offsets>
+      <x-m> -7.813 </x-m>
+      <y-m>  6.41 </y-m>
+      <z-m> -3.168 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Effects/smoke/smoke_4r.xml</path>
+    <offsets>
+      <x-m>  -4.540 </x-m>
+      <y-m>  11.319 </y-m>
+      <z-m>  -3.005 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- surprise-->
   
   <model>
     <path>Aircraft/Tu-95MR/Models/Effects/smoke/surprise1.xml</path>
@@ -2111,7 +2096,7 @@
     </axis>
   </animation>
 
-    <!-- Compression -->
+    <!-- Compression Front Wheel-->
     
     <animation>
     <name>RoueAvant</name>
@@ -2136,17 +2121,19 @@
   </animation>
   
   <animation>
-    <name>TrainGauche</name>
+    <name>Links</name>
     <object-name>roueG1</object-name>
     <object-name>roueG3</object-name>
     <object-name>axeG1</object-name>
     <object-name>axeG2</object-name>
     <object-name>axeG3</object-name>
   </animation>
-    
+   
+       <!-- Compression left Wheels-->
+   
   <animation>
     <type>translate</type>
-    <object-name>TrainGauche</object-name>
+    <object-name>roueG1</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
@@ -2160,7 +2147,51 @@
   </animation>
   
   <animation>
-    <name>TrainDroit</name>
+    <type>translate</type>
+    <object-name>roueG3</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeG3</object-name>
+    
+    <expression>
+      <product>
+	<sum>
+	  <property>gear/gear[1]/compression-norm</property>
+	  <property>gear/gear[2]/compression-norm</property>
+	</sum>
+	<value>0.22</value>
+      </product>
+    </expression>
+    
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+      <!-- Compression right Wheels-->
+  
+  <animation>
+    <name>Rechts</name>
     <object-name>roueD1</object-name>
     <object-name>roueD3</object-name>
     <object-name>axeD1</object-name>
@@ -2170,7 +2201,22 @@
     
   <animation>
     <type>translate</type>
-    <object-name>TrainDroit</object-name>
+    <object-name>roueD1</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueD3</object-name>
     <property>gear/gear[4]/compression-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
@@ -2182,6 +2228,35 @@
       <z> 1 </z>
     </axis>
   </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>axeD3</object-name>
+    
+    <expression>
+      <product>
+	<sum>
+	  <property>gear/gear[3]/compression-norm</property>
+	  <property>gear/gear[4]/compression-norm</property>
+	</sum>
+	<value>0.22</value>
+      </product>
+    </expression>
+    
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.5 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <!-- Compression Tail Wheel-->
   
   <animation>
     <type>translate</type>
@@ -2201,8 +2276,7 @@
 
   
 
-  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
-  
+  <!-- Steering Wheel -->  
 
   <animation>
     <type>rotate</type>
@@ -2221,12 +2295,12 @@
     </axis>
   </animation>
 
-  <!-- Rotation des roues lors du roulage -->
+  <!-- Rotating Wheels -->
   <animation>
     <type>spin</type>
     <object-name>roueA</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 23 </factor>
     <center>
       <x-m> -18.031 </x-m>
       <y-m>   0.000 </y-m>
@@ -2243,7 +2317,7 @@
     <type>spin</type>
     <object-name>roueG1</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 12 </factor>
     <center>
       <x-m> -5.239 </x-m>
       <y-m> -6.411 </y-m>
@@ -2260,7 +2334,7 @@
     <type>spin</type>
     <object-name>roueG3</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 12 </factor>
     <center>
       <x-m> -3.074 </x-m>
       <y-m> -6.411 </y-m>
@@ -2277,7 +2351,7 @@
     <type>spin</type>
     <object-name>roueD1</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 12 </factor>
     <center>
       <x-m> -5.239 </x-m>
       <y-m>  6.411 </y-m>
@@ -2294,7 +2368,7 @@
     <type>spin</type>
     <object-name>roueD3</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 12 </factor>
     <center>
       <x-m> -3.074 </x-m>
       <y-m>  6.411 </y-m>
@@ -2311,7 +2385,7 @@
     <type>spin</type>
     <object-name>roueB</object-name>
     <property>sim/multiplay/generic/float[12]</property>
-    <factor> 30 </factor>
+    <factor> 10 </factor>
     <center>
       <x-m> 15.524 </x-m>
       <y-m>  0.000 </y-m>
@@ -2341,5 +2415,50 @@
       <z>  0 </z>
     </axis>
   </animation>
+  
+  <!--runway effect -->
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/tyres.xml</path>
+ <offsets> 
+  <x-m> -3.074 </x-m>
+      <y-m> -6.411 </y-m>
+      <z-m> -6.763 </z-m>
+ </offsets>
+</model>
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/tyres.xml</path>
+ <offsets> 
+  <x-m> -3.074 </x-m>
+      <y-m> 6.411 </y-m>
+      <z-m> -6.763 </z-m>
+ </offsets>
+</model>
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/ground/touch.xml</path>
+ <offsets> 
+  <x-m> -3.074 </x-m>
+      <y-m> -6.411 </y-m>
+      <z-m> -6.763 </z-m>
+ </offsets>
+</model>
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/ground/touch.xml</path>
+ <offsets> 
+  <x-m> -3.074 </x-m>
+      <y-m> 6.411 </y-m>
+      <z-m> -6.763 </z-m>
+ </offsets>
+</model>
+
+ <!-- LOD for the model as a whole -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>25000</max-m>
+ </animation>
   
 </PropertyList>

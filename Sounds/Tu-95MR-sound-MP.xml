@@ -20,7 +20,7 @@
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.30</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
@@ -33,11 +33,10 @@
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.32</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
     
     <crank>
@@ -47,11 +46,10 @@
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.34</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
     
     <crank>
@@ -61,11 +59,10 @@
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.36</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
   
   <!-- Engines 1 -4 running -->
@@ -73,106 +70,184 @@
     <engine>
       <name>engine0</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-left.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>  
       <volume>
         <property>/engines/engine[0]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>        
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
         <property>/engines/engine[0]/rpm</property>
-        <factor>0.0004</factor>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-    <!-- Moteur 2 -->
     <engine>
       <name>engine1</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-left.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>  
       <volume>
         <property>/engines/engine[1]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>       
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
         <property>/engines/engine[1]/rpm</property>
-        <factor>0.0004</factor>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-
-    <!-- Moteur 3 -->
     <engine>
       <name>engine2</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-right.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>  
       <volume>
         <property>/engines/engine[2]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>        
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
         <property>/engines/engine[2]/rpm</property>
-        <factor>0.0004</factor>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-
-    <!-- Moteur 4 -->
     <engine>
       <name>engine3</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-right.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>  
       <volume>
         <property>/engines/engine[3]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>       
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
         <property>/engines/engine[3]/rpm</property>
-        <factor>0.0004</factor>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
+    
+    <!-- Engines 1 -4 reverse-runway -->
+		
+		<engine0r>
+		  <name>engine0r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-left.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[12]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[8]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-5.2</x>
+		    <y>-13.4</y>
+		    <z>-1.1</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine0r>
+		
+		<engine1r>
+		  <name>engine1r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-left.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[13]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[9]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-4.32</x>
+		    <y>-6.88</y>
+		    <z>-0.25</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine1r>
+		
+		<engine2r>
+		  <name>engine2r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-right.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[14]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[10]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>      
+		  </volume>
+		  <position>
+		    <x>-4.32</x>
+		    <y> 6.88</y>
+		    <z>-0.25</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine2r>
+		
+		<engine3r>
+		  <name>engine3r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-right.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[15]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[11]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-5.8</x>
+		    <y>6.9</y>
+		    <z>-1.1</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine3r>
 
      <!-- Rumble on runway -->
 
@@ -214,7 +289,9 @@
       <reference-dist>100</reference-dist>
       <max-dist>2000</max-dist>
     </rumble>
-
+    
+    
+    
     <!-- Gear in and out -->
     
     <gear>

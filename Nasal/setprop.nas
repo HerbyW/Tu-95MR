@@ -1,12 +1,21 @@
+#
+#  Copyright (C) Herbert Wagner Dec2014-2016
+#  see Read-Me.txt for all copyrights in the base folder of this aircraft
+###################################################################################
+setprop("/sim/signals/fdm-ready", 0);
 
 
-#    ###################################################################################
-#    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-#    Development is ongoing, see latest version: www.github.com/HerbyW
-#    This file is licenced under the terms of the GNU General Public Licence V3 or later
-#    ###################################################################################
+var fdmready = maketimer(3, func {
+  
+  if (getprop ("/sim/time/elapsed-sec") > 15 )  
+  setprop("/sim/signals/fdm-ready", 1); 
+    
+});
+
+fdmready.start();
 
 
+###################################################################################
 #UVID-15 Control for Pressure in mmhg and inhg
 # create listener
 
@@ -55,19 +64,6 @@ setlistener("controls/paratroopers/trigger/state", func(state)
   }
 }
 );
-
-
-######################################################################################################################
-
-#
-#Bradle Tank roll out and jump
-#
-
-
-#
-#Bradle Tank loading 3 tanks
-#
-
 
 ######################################################################################################################
 
@@ -386,37 +382,65 @@ setprop("sim/messages/copilot", "For Autostart hit the s key!");
 ####################################################################################################################
 
 #
-# Reverser
+# Reverser and throttle control
 #
 
-setlistener("controls/engines/engine[0]/throttle", func
+setlistener("/controls/engines/engine[0]/throttle", func
  {
-if
-(  getprop("/controls/reverser") == 0) 
-{
-setprop("/controls/engines/engine[0]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[1]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[2]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[3]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
-
-setprop("/controls/engines/engine[0]/throttle-r", 0);
-setprop("/controls/engines/engine[1]/throttle-r", 0);
-setprop("/controls/engines/engine[2]/throttle-r", 0);
-setprop("/controls/engines/engine[3]/throttle-r", 0);
-}
-else
-{  
-setprop("/controls/engines/engine[0]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[1]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[2]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
-setprop("/controls/engines/engine[3]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
-
-setprop("/controls/engines/engine[0]/throttle-v", 0);
-setprop("/controls/engines/engine[1]/throttle-v", 0);
-setprop("/controls/engines/engine[2]/throttle-v", 0);
-setprop("/controls/engines/engine[3]/throttle-v", 0);
-}
+  if ((getprop("/controls/engines/engine[0]/throttle") < 0.015) and (getprop("/controls/autostart-time") == 1)) 
+  setprop("/controls/engines/engine[0]/throttle", 0.015);
  }
+);
+
+setlistener("/controls/engines/engine[1]/throttle", func
+ {
+  if (getprop("/controls/engines/engine[1]/throttle") < 0.015 and getprop("/controls/autostart-time") == 1) 
+  setprop("/controls/engines/engine[1]/throttle", 0.015);
+ }
+);
+
+setlistener("/controls/engines/engine[2]/throttle", func
+ {
+  if (getprop("/controls/engines/engine[2]/throttle") < 0.015 and getprop("/controls/autostart-time") == 1) 
+  setprop("/controls/engines/engine[2]/throttle", 0.015);
+ }
+);
+
+setlistener("/controls/engines/engine[3]/throttle", func
+ {
+  if (getprop("/controls/engines/engine[3]/throttle") < 0.015 and getprop("/controls/autostart-time") == 1) 
+  setprop("/controls/engines/engine[3]/throttle", 0.015);
+ }
+);
+
+
+setlistener("/controls/engines/engine[0]/throttle", func
+{   
+ if ((getprop("/controls/reverser") == 0) and (getprop("/controls/autostart-time") == 1)) 
+ {
+  setprop("/controls/engines/engine[0]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[1]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[2]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[3]/throttle-v", getprop("/controls/engines/engine[0]/throttle"));
+
+  setprop("/controls/engines/engine[0]/throttle-r", 0);
+  setprop("/controls/engines/engine[1]/throttle-r", 0);
+  setprop("/controls/engines/engine[2]/throttle-r", 0);
+  setprop("/controls/engines/engine[3]/throttle-r", 0);
+ }
+ if ((getprop("/controls/reverser") == 1) and (getprop("/controls/autostart-time") == 1))
+ {  
+  setprop("/controls/engines/engine[0]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[1]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[2]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
+  setprop("/controls/engines/engine[3]/throttle-r", getprop("/controls/engines/engine[0]/throttle"));
+
+  setprop("/controls/engines/engine[0]/throttle-v", 0);
+  setprop("/controls/engines/engine[1]/throttle-v", 0);
+  setprop("/controls/engines/engine[2]/throttle-v", 0);
+  setprop("/controls/engines/engine[3]/throttle-v", 0);
+ }
+}
 );
 
 #############################################################################################################
@@ -542,3 +566,53 @@ setlistener("controls/flight/flaps", func
     setprop("sim/messages/copilot", "Do you want to destroy the flaps due to overspeed (max 240)????");    
   }
 });
+
+##############################################################################################################
+# runway effect
+
+
+setprop("controls/gear/runway", 0);
+
+setlistener("gear/gear[2]/wow", func
+{
+  if (getprop("gear/gear[2]/wow") == 0)
+    interpolate("controls/gear/runway", 0 , 0.1);
+  else
+  {
+  if ( ( getprop("gear/gear[2]/compression-norm") > 0.20 ) and ( getprop("gear/gear[2]/rollspeed-ms") > 60)  and ( getprop("/velocities/speed-down-fps") > 2))
+    interpolate("controls/gear/runway", 1 , 0.3, 0 , 0.3);
+  }
+}
+);
+
+setlistener("controls/gear/brake-parking", func
+{
+  if (getprop("controls/gear/brake-parking") == 0)
+    interpolate("controls/gear/runway", 0 , 0.1);
+  else
+  {
+  if ( ( getprop("controls/gear/brake-parking") == 1 ) and ( getprop("gear/gear[2]/rollspeed-ms") > 30) )
+    interpolate("controls/gear/runway", 1 , 1.2, 0 , 1.2);
+  }
+}
+);
+
+######################################################################################################################
+# smoke shooter definition
+#  /sim/model/smokeshooterspeed  == float n="17"
+
+#<speed-mps>
+#<value>80</value>
+#<spread>15</spread>
+#</speed-mps>
+
+setlistener("gear/gear[2]/wow", func
+{
+  if (getprop("gear/gear[2]/wow") == 0)
+    setprop("/sim/model/smokeshooterspeed", 80 );
+  else
+  {
+   setprop("/sim/model/smokeshooterspeed", 35 + getprop("/gear/gear[2]/rollspeed-ms") * 0.5);
+  }
+}
+);

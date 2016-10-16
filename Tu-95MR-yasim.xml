@@ -323,7 +323,7 @@ Approach Elevator: -0.110281
 		  </propeller>
 		  
   <!-- Nose wheel -->
-  <gear x="18.031" y="0.000" z="-7.077" 
+  <gear x="18.031" y="0.000" z="-7.00" 
         compression="0.5" 
         retract-time="5" 
         spring="3.0" 
@@ -339,8 +339,8 @@ Approach Elevator: -0.110281
         <control-speed control="EXTEND" transition-time="9.7"/>
   </gear>
 
-  <!-- Left wheels all 6 wheels 2m backwards to get better standing conditions-->
-  <gear x="3.239" y="6.411" z="-7"
+  <!-- Left wheels all 4 wheels 2m backwards to get better standing conditions-->
+  <gear x="3.239" y="6.411" z="-7.1"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -354,7 +354,7 @@ Approach Elevator: -0.110281
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="2.138" y="6.411" z="-7.125"
+  <gear x="0.074" y="6.411" z="-7.03"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -368,22 +368,8 @@ Approach Elevator: -0.110281
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
-  <gear x="1.074" y="6.411" z="-7.25"
-        compression="0.5" 
-        retract-time="7" 
-        spring="0.8" 
-        damp="1.1" 
-        sfric="0.9" 
-        dfric="0.5">
-        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="9.7"/>
-        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
-  </gear>
-
   <!-- Right wheels -->
-  <gear x="3.239" y="-6.411" z="-7"
+  <gear x="3.239" y="-6.411" z="-7.1"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -397,7 +383,7 @@ Approach Elevator: -0.110281
         <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
 
-  <gear x="2.138" y="-6.411" z="-7.125"
+  <gear x="0.074" y="-6.411" z="-7.03"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -409,20 +395,6 @@ Approach Elevator: -0.110281
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-speed control="EXTEND" transition-time="9.7"/>
         <control-output control="EXTEND" prop="/gear/gear[5]/position-norm"/>
-  </gear>
-
-  <gear x="1.074" y="-6.411" z="-7.25"
-        compression="0.5" 
-        retract-time="7" 
-        spring="0.8" 
-        damp="1.1" 
-        sfric="0.9" 
-        dfric="0.5">
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="9.7"/>
-        <control-output control="EXTEND" prop="/gear/gear[6]/position-norm"/>
   </gear>
 
   <!-- Tail wheel -->

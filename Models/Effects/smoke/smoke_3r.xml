@@ -5,41 +5,29 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 <PropertyList>
 	<particlesystem>
-		<name>engine-smoke</name>
+		<name>engine-smoke-rev</name>
 		<offsets>
-			<x-m>0</x-m>
+			<x-m>-1</x-m>
 			<y-m>0</y-m>
 			<z-m>0</z-m>
 			<roll-deg>0</roll-deg>
-			<pitch-deg>0</pitch-deg>
-			<heading-deg>0</heading-deg>
+			<pitch-deg>1</pitch-deg>
+			<heading-deg>180</heading-deg>
 		</offsets>
 		<texture>smoke.png</texture>
 		
 		<condition>
 		  <and>
-		    <not><property>sim/multiplay/generic/int[6]</property></not>
+		  <property>sim/multiplay/generic/int[6]</property>
 		           <greater-than>
+					<property>sim/multiplay/generic/float[10]</property>
+					<value>0.05</value>
+			   </greater-than>
+			   <greater-than>
 					<property>sim/multiplay/generic/float[6]</property>
 					<value>62</value>
 			   </greater-than>
-			  <or>
-				<greater-than>
-					<property>sim/multiplay/generic/float[10]</property>
-					<value>0.90</value>
-				</greater-than>
-				<and>
-					<greater-than>
-						<property>sim/multiplay/generic/float[10]</property>
-						<value>0.045</value>
-					</greater-than>
-					<less-than>
-						<property>sim/multiplay/generic/float[10]</property>
-						<value>0.25</value>
-					</less-than>
-				</and>
-			  </or>
-			</and>
+		</and>
 		</condition>
 		
 		<emissive>false</emissive>
@@ -50,13 +38,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 			<type>point</type>
 		</placer>
 		<shooter>
-			<theta-min-deg>89</theta-min-deg>
-			<theta-max-deg>91</theta-max-deg>
-			<phi-min-deg>-1</phi-min-deg>
-			<phi-max-deg> 1</phi-max-deg>
+			<theta-min-deg>85</theta-min-deg>
+			<theta-max-deg>95</theta-max-deg>
+			<phi-min-deg>-5</phi-min-deg>
+			<phi-max-deg> 5</phi-max-deg>
 			<speed-mps>
-				<property>sim/multiplay/generic/float[18]</property>
-				<spread>15</spread>
+				<value>8</value>
+				<spread>1</spread>
 			</speed-mps>
 			<rotation-speed>
 				<x-min-deg-sec>0</x-min-deg-sec>
@@ -70,7 +58,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 		<counter>
 			<particles-per-sec>
 				<value>50</value>
-				<spread>3</spread>
+				<spread>6</spread>
 			</particles-per-sec>
 		</counter>
 		<particle>
@@ -79,7 +67,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 					<red><value>0.32</value></red>
 					<green><value>0.32</value></green>
 					<blue><value>0.32</value></blue>
-					<alpha><value>0.06</value></alpha>
+					<alpha><value>0.07</value></alpha>
 				</color>
 				<size>
 					<value>0.5</value>
@@ -93,11 +81,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 					<alpha><value>0.0</value></alpha>
 				</color>
 				<size>
-					<value>32</value>
+					<value>10</value>
 				</size>
 			</end>
 			<life-sec>
-				<value>10</value>
+				<value>7</value>
 			</life-sec>
 			<mass-kg>0.5</mass-kg>
 			<radius-m>0.01</radius-m>
