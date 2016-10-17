@@ -11,17 +11,70 @@
 <PropertyList>
 
   
-  <path>panel-h.ac</path>
-
+  <path>interior-panel-hw03.ac</path>
+  
+   <!-- the ice effect -->
+	
+	<effect>
+	  <inherits-from>Effects/model-transparent</inherits-from>
+	  <object-name>icing</object-name>
+	</effect>
+	
+	<animation>
+	  <type>select</type>
+	  <object-name>icing</object-name>
+	  <condition>
+	    <less-than>
+	      <property>sim/multiplay/generic/float[0]</property>
+	      <value>0.95</value>
+	    </less-than>
+	  </condition>
+	</animation>
+	
+	<animation>
+	  <type>blend</type>
+	  <object-name>icing</object-name>
+	  <property>sim/multiplay/generic/float[0]</property>
+	  <factor>1</factor>
+	</animation> 
+ 
+    <!-- Animation Stair Doors -->
   <animation>
-    <!-- Objets opaques -->
-    <object-name>panel</object-name>
-    <object-name>sides</object-name>
-    <object-name>pedestal</object-name>
-    <object-name>overhead</object-name>
-    
-    <!-- Objets transparents -->
-  </animation> 
+    <type>rotate</type>
+    <object-name>stair-dl</object-name>
+    <property>sim/multiplay/generic/int[3]</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>      
+      <entry><ind> 1.00 </ind><dep> -90 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.796 </x1-m>
+      <y1-m>-0.601 </y1-m>
+      <z1-m>-1.183 </z1-m>
+      <x2-m> 4.681 </x2-m>
+      <y2-m>-0.601 </y2-m>
+      <z2-m>-1.183 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stair-dr</object-name>
+    <property>sim/multiplay/generic/int[3]</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>   0 </dep></entry>      
+      <entry><ind> 1.00 </ind><dep>  90 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.796 </x1-m>
+      <y1-m> 0.601 </y1-m>
+      <z1-m>-1.183 </z1-m>
+      <x2-m> 4.681 </x2-m>
+      <y2-m> 0.601 </y2-m>
+      <z2-m>-1.183 </z2-m>
+    </axis>
+  </animation>
+  
   
     <!-- Warning Indicator: Reverser (yellow),fuel-low, over-speed, over-loading,
          Decision-Height, Parking Chokes, Marker (outer, middle, inner) -->
@@ -113,6 +166,23 @@
       <x-m>  0.008 </x-m>
       <y-m> -0.44 </y-m>
       <z-m>  0.197 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/warning/warning60.xml</path>
+    <offsets>
+      <x-m>  0.008 </x-m>
+      <y-m> -0.635 </y-m>
+      <z-m>  0.174 </z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/warning/warning63.xml</path>
+    <offsets>
+      <x-m>  0.008 </x-m>
+      <y-m> -0.591 </y-m>
+      <z-m>  0.174 </z-m>
     </offsets>
   </model>
   
@@ -2198,6 +2268,162 @@ SKAWK</text>
     </emission>
   </animation>
   
+         <!-- Switches block 5 ICE -->
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/bano/bano5.xml</path>
+    <offsets>
+      <x-m>  0.350 </x-m>
+      <y-m>  -0.106 </y-m>
+      <z-m>  0.475 </z-m>
+      <pitch-deg>56</pitch-deg>
+    </offsets>
+  </model>
+ 
+    <!-- Text 7 --> 
+
+  <text>
+    <name>text7</name>
+    <type type="string">literal</type>
+    <text type="string">Glass
+Heating</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.008</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.035</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.332 </x-m>
+      <y-m>  -0.161 </y-m>
+      <z-m>  0.460 </z-m>
+      <pitch-deg>56</pitch-deg>
+    </offsets>
+  </text>
+ 
+ <animation>
+    <type>material</type>    
+    <object-name>text7</object-name>    
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  </animation>
+  
+      <!-- Text 8 --> 
+  
+  <text>
+    <name>text8</name>
+    <type type="string">literal</type>
+    <text type="string">Propeller
+Heating</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.008</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.035</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.332 </x-m>
+      <y-m>  -0.109 </y-m>
+      <z-m>  0.460 </z-m>
+      <pitch-deg>56</pitch-deg>
+    </offsets>
+  </text>
+ 
+ <animation>
+    <type>material</type>    
+    <object-name>text8</object-name>    
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  </animation>
+  
+      <!-- Text 9 --> 
+  
+    <text>
+    <name>text9</name>
+    <type type="string">literal</type>
+    <text type="string">Intrument
+Heating</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.008</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.035</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.332 </x-m>
+      <y-m>  -0.057 </y-m>
+      <z-m>  0.460 </z-m>
+      <pitch-deg>56</pitch-deg>
+    </offsets>
+  </text>
+ 
+ <animation>
+    <type>material</type>    
+    <object-name>text9</object-name>    
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
+  </animation>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/red-lamp-glassheating.xml</path>
+    <offsets>
+      <x-m>  0.382 </x-m>
+      <y-m>  -0.161 </y-m>
+      <z-m>  0.517 </z-m>
+      <pitch-deg>59</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/red-lamp-rotorheating.xml</path>
+    <offsets>
+      <x-m>  0.382 </x-m>
+      <y-m>  -0.109 </y-m>
+      <z-m>  0.517 </z-m> 
+      <pitch-deg>59</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/Panel/Instruments/redlamp/red-lamp-instrumentheating.xml</path>
+    <offsets>
+      <x-m>  0.382 </x-m>
+      <y-m>  -0.057 </y-m>
+      <z-m>  0.517 </z-m> 
+      <pitch-deg>59</pitch-deg>
+    </offsets>
+  </model>
+  
     <!-- Ikone Picture -->
   
   <model>
@@ -2205,7 +2431,7 @@ SKAWK</text>
     <offsets>
       <x-m>  0.573 </x-m>
       <y-m>  -0.0 </y-m>
-      <z-m>  0.565 </z-m>
+      <z-m>  0.525 </z-m>
       <pitch-deg>72</pitch-deg>
     </offsets>
   </model>

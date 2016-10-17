@@ -10,31 +10,31 @@
 
 <PropertyList>
 
-  <path>tu95-7.ac</path>
+  <path>tu95-8.ac</path>
 
   <sound>
     <path>Aircraft/Tu-95MR/Sounds/Tu-95MR-sound-MP.xml</path>
   </sound>
   
   <animation>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
   </animation>
   
   <animation>
     <type>noshadow</type>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
   </animation>
   
   <animation>
 <type>shader</type>
 <shader>chrome</shader>
     <texture>Aircraft/Tu-95MR/Models/glass_shader.png</texture>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
 </animation>
 
 <animation>
     <type>material</type>
-       <object-name>vitres.001</object-name>       
+       <object-name>windows</object-name>       
        <emission>
     <factor-prop>sim/multiplay/generic/int[5]</factor-prop>
       <red>   0.05 </red>
@@ -111,7 +111,7 @@
     <object-name>trous</object-name> 
 
     <!-- Objets transparents -->
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
     <object-name>propdiscGE1</object-name>
     <object-name>propdiscGE2</object-name>
     <object-name>propdiscGI1</object-name>
@@ -324,7 +324,7 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
     <object-name>propdiscGE1</object-name>
     <object-name>propdiscGE2</object-name>
     <object-name>propdiscGI1</object-name>
@@ -349,7 +349,7 @@
     <condition>
       <property>sim/rendering/rembrandt/enabled</property>
     </condition>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
     <object-name>propblurGE1</object-name>
     <object-name>propdiscGE1</object-name>
     <object-name>propblurGE2</object-name>
@@ -369,8 +369,19 @@
   </effect>
   
   <animation>
-    <object-name>vitres.001</object-name>
+    <object-name>windows</object-name>
 </animation>
+
+<!-- Interior and Panel-->
+  <model>
+    <path>Aircraft/Tu-95MR/Models/Interior/interior-panel.xml</path>
+    <offsets>
+      <x-m> -18.521 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -1.65 </z-m>
+    </offsets>
+  </model>
+
 
 <!-- Missile -->
   <model>
@@ -566,9 +577,9 @@
  <model>
     <path>Aircraft/Tu-95MR/Models/Effects/stairs/stairs.xml</path>
     <offsets>
-      <x-m>  -16.50 </x-m>
+      <x-m>  -15.40 </x-m>
       <y-m>  0.0 </y-m>
-      <z-m> -7.0 </z-m>
+      <z-m> -6.92 </z-m>
       <heading-deg>180.0</heading-deg>
     </offsets>
   </model>
@@ -624,14 +635,7 @@
 	</offsets>
 </model>
 
-  
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Tu-95MR/Models/Interior/interior.xml</path>
-  </model>
-
   <!-- Particules OSG -->
-  <!-- Effets sur le sol -->
   <!-- Roue avant -->
   <model>
     <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
@@ -1896,6 +1900,17 @@
     <object-name>axeA2</object-name>
     <object-name>roueA</object-name>
   </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>TrainAvant</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>0.22</value>
+      </greater-than>
+    </condition>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -2454,11 +2469,4 @@
  </offsets>
 </model>
 
- <!-- LOD for the model as a whole -->
- <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>25000</max-m>
- </animation>
-  
 </PropertyList>

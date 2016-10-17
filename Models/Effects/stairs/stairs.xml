@@ -24,12 +24,12 @@
   
   <property>sim/multiplay/generic/int[3]</property>
   <offset>1</offset>
-  <x-max>1.5</x-max>
-  <y-max>1.2</y-max>
-  <z-max>1.9</z-max>
-  <x-factor>1.5</x-factor>
-  <y-factor>1.2</y-factor>
-  <z-factor>1.9</z-factor>
+  <x-max>1.65</x-max>
+  <y-max>1.32</y-max>
+  <z-max>2.19</z-max>
+  <x-factor>1.65</x-factor>
+  <y-factor>1.32</y-factor>
+  <z-factor>2.19</z-factor>
  </animation>
 
 </PropertyList>
