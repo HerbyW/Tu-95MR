@@ -56,47 +56,20 @@ Armament
 
     Radar-controlled guns: 1 or 2 × 23 mm AM-23 autocannon in tail turret.
     Missiles: Up to 15,000 kg (33,000 lb), including the Raduga Kh-20, Kh-22, and Kh-55/101/102 Air-to-surface missiles.
-    
-    YASim solution results:
-       Iterations: 2434
- Drag Coefficient: 3.48779
-       Lift Ratio: 616.58
-       Cruise AoA: 0.490284
-   Tail Incidence: -4.27163
-Approach Elevator: -0.116204
-            CG: 1.449, 0.000, -1.831
-            
+
             YASim solution results:
-       Iterations: 2639
- Drag Coefficient: 3.14117
-       Lift Ratio: 630.436
-       Cruise AoA: 0.681459
-   Tail Incidence: -4.67765
-Approach Elevator: -0.110281
-            CG: 1.449, 0.000, -1.831
-            
-            YASim solution results:
-       Iterations: 2652
- Drag Coefficient: 3.14099
-       Lift Ratio: 630.471
-       Cruise AoA: 0.681503
-   Tail Incidence: -4.6778
-Approach Elevator: -0.198499
-            CG: 1.449, 0.000, -1.831
-            
-            YASim solution results:
-       Iterations: 2637
- Drag Coefficient: 3.14114
-       Lift Ratio: 630.437
-       Cruise AoA: 0.681476
-   Tail Incidence: -4.67769
-Approach Elevator: -0.141754
-            CG: 1.449, 0.000, -1.831
+       Iterations: 1652
+ Drag Coefficient: 10.1017
+       Lift Ratio: 239.079
+       Cruise AoA: 0.675514
+   Tail Incidence: -4.25374
+Approach Elevator: -0.327475
+            CG: 1.440, 0.000, -1.834   330
     -->
 
 <airplane mass="145000" version="YASIM_VERSION_CURRENT">
 
-  <approach speed="110" aoa="3" fuel="0.2">
+  <approach speed="90" aoa="5" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle-v" value="0.7"/>
     <control-setting axis="/controls/engines/engine[0]/condition" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0"/>
@@ -161,7 +134,7 @@ Approach Elevator: -0.141754
 	incidence="2"
 	twist="-2"
         dihedral="-2.5"
-        camber="0.05">
+        camber="0.02">
         <stall aoa="9" width="8" peak="1.5"/>
         <flap0 start="0.10" end="0.60" lift="1.5" drag="1.8"/>
         <flap1 start="0.75" end="1.0" lift="1.3" drag="1.1"/>
@@ -222,7 +195,7 @@ Approach Elevator: -0.141754
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -254,7 +227,7 @@ Approach Elevator: -0.141754
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -286,7 +259,7 @@ Approach Elevator: -0.141754
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -318,7 +291,7 @@ Approach Elevator: -0.141754
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -436,8 +409,8 @@ Approach Elevator: -0.141754
 
   <tank x="5.00" y=" 7" z="-2.466" capacity="67950"/>
   <tank x="5.00" y="-7" z="-2.466" capacity="67950"/>
-  <tank x="12.00" y=" 0" z="-2.466" capacity="27950"/>
-  <tank x="-6.00" y="0" z="-2.466" capacity="20950"/>
+  <tank x="12.00" y=" 0" z="-2.466" capacity="28950"/>
+  <tank x="-6.00" y="0" z="-2.466" capacity="23450"/>
 
   <!-- Mass distribution old was CG: 4.696, 0.000, -2.812-->
   <ballast x="18.5" y="0" z="-2.14" mass="20000"/>
