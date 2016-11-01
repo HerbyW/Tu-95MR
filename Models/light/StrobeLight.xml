@@ -7,13 +7,14 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 
 <PropertyList>
 
-  <path>RedLight.ac</path>
+  <path>WhiteLight.ac</path>
 
   <animation>
     <type>noshadow</type>
     <object-name>Light</object-name>
   </animation>
 
+  <!-- Transparency for Rembrandt -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Light</object-name>
@@ -33,23 +34,22 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <spherical type="bool">true</spherical>
   </animation>
 
-      <animation>
+  <animation>
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[8]</property>
+      <property>sim/multiplay/generic/int[7]</property>
     </condition>
   </animation>
 
-  
   <animation>
     <type>material</type>
     <object-name>Light</object-name>
     <emission>
-      <red>   1 </red>
-      <green> 1 </green>
-      <blue>  1 </blue>
-      <factor-prop>sim/multiplay/generic/int[8]</factor-prop>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  2 </blue>
+      <factor-prop>sim/multiplay/generic/int[7]</factor-prop>
     </emission>
   </animation>
 
@@ -57,9 +57,9 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <type>dist-scale</type>
     <object-name>Light</object-name>
     <interpolation>
-      <entry><ind>    0 </ind><dep> 0.25 </dep></entry>
-      <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
-      <entry><ind> 1500 </ind><dep> 1.70 </dep></entry>
+      <entry><ind>    0 </ind><dep> 0.5 </dep></entry>
+      <entry><ind>   20 </ind><dep> 0.9 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 3.0 </dep></entry>
     </interpolation>
   </animation>
 

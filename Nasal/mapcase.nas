@@ -2,6 +2,7 @@
 #
 # Map case inserted paper images (.svg or .png in Instruments-3d/mapcase/).
 # From TU154B
+#  Copyright (C) Herbert Wagner Dec2014-2016
 
 var mapcase = canvas.new({
     name: "MapCase",

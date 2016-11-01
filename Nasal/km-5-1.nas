@@ -4,15 +4,7 @@
 # Novosibirsk, Russia
 # jun 2007, dec 2013
 #
-#    ###################################################################################
-#    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-#    Development is ongoing, see latest version: www.github.com/HerbyW
-#    This file is licenced under the terms of the GNU General Public Licence V3 or later
-#    
-#    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-#    Eagel: Liveries
-#    ###################################################################################
-
+#  Copyright (C) Herbert Wagner Dec2014-2016
 ######################################################################
 
 

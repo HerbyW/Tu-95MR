@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -543,6 +540,31 @@
       <x-m> -0.85 </x-m>
       <y-m>  -16.249 </y-m>
       <z-m>  -2.492 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 23.12 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  6.51 </z-m>
+    </offsets>
+  </model>
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 6.79 </x-m>
+      <y-m>  -25.15 </y-m>
+      <z-m>  -2.84 </z-m>
+    </offsets>
+  </model>
+  <model>
+   <path>Aircraft/Tu-95MR/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 6.79 </x-m>
+      <y-m>  25.15 </y-m>
+      <z-m>  -2.84 </z-m>
     </offsets>
   </model>
   

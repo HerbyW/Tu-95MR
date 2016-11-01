@@ -1,14 +1,8 @@
 #
 # Autostart for TU-95MR
 #
-#    ###################################################################################
-#    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-#    Development is ongoing, see latest version: www.github.com/HerbyW
-#    This file is licenced under the terms of the GNU General Public Licence V3 or later
-#    
-#    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-#    Eagel: Liveries
-#    ###################################################################################
+#  Copyright (C) Herbert Wagner Dec2014-2016
+
 setprop("/controls/autostart-time", 1);
 
 setlistener("/controls/autostart", func 
@@ -27,6 +21,7 @@ setlistener("/controls/autostart", func
 	setprop("/controls/electric/battery-switch", 1);
         setprop("/controls/switches/gauge-light", 1);
         setprop("/controls/lighting/nav-lights", 1);
+	setprop("/controls/lighting/beacon", 1);
 	
 	setprop("sim/messages/copilot", "Main power and lights are on");
 	
@@ -74,6 +69,8 @@ setlistener("/controls/electric/battery-switch", func
 		
         setprop("/controls/switches/gauge-light", 0);
         setprop("/controls/lighting/nav-lights", 0);
+	setprop("/controls/lighting/beacon", 0);
+	setprop("/controls/lighting/strobe", 0);
 	
 	setprop("sim/messages/copilot", "Main power and lights are off");
 	

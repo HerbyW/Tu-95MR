@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -1679,12 +1676,12 @@ Battery</text>
   </animation>
   
  
-   <!-- NAV Lights Text--> 
+<!-- NAV Lights Text--> 
 
   <text>
     <name>Navlights</name>
     <type type="string">literal</type>
-    <text type="string">NAV
+    <text type="string">Beacon NAV Strobe
 Lights</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
@@ -1692,7 +1689,7 @@ Lights</text>
     <character-aspect-ratio type="double">1.0</character-aspect-ratio>
     <axis-alignment>yz-plane</axis-alignment>
     <max-height>0.06</max-height>
-    <max-width>0.035</max-width>
+    <max-width>0.075</max-width>
     <font-resolution>
       <width type="int">32</width>
       <height type="int">32</height>

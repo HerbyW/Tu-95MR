@@ -2,6 +2,8 @@
 #
 #  frank-deng committed on 22 Nov 
 #
+#  Copyright (C) Herbert Wagner Dec2014-2016
+
 var next_waypoint = func {
 	if ("true-heading-hold" == getprop("/autopilot/locks/heading")
 		and getprop("/autopilot/route-manager/active")) {
