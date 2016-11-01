@@ -605,6 +605,17 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <heading-deg>180.0</heading-deg>
     </offsets>
   </model>
+  
+  <!--Personal -->
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/exe/ap01.xml</path>
+ <offsets> 
+  <x-m> -8.074 </x-m>
+      <y-m> 1.9 </y-m>
+      <z-m> -6.96 </z-m>
+ </offsets>
+</model>
  
          <!-- Chokes -->
 
