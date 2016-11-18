@@ -427,31 +427,14 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	</axis>
   </animation>
   
-  <!-- Taxi lamps on front wheel-->
-  <model>
-    <path>Aircraft/Tu-95MR/Models/light/landinglightstaxi.xml</path>
+  <!-- NEW   Taxi and Landing lights-->
+ 
+ <model>
+    <path>Aircraft/Tu-95MR/Models/light/Tu-95MR-lights.xml</path>
     <offsets>
-      <x-m> -17.96 </x-m>
-      <y-m>   -0.01 </y-m>
-      <z-m>  -4.5 </z-m>
-    </offsets>
-  </model>
-  <!-- Landing lamps on top -->
-  <model>
-    <path>Aircraft/Tu-95MR/Models/light/landinglights.xml</path>
-    <offsets>
-      <x-m> -18.3 </x-m>
-      <y-m>   -0.01 </y-m>
-      <z-m>  -3.75 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Tu-95MR/Models/light/TU-160-lights.xml</path>
-    <offsets>
-      <x-m> -2.35 </x-m>
-      <y-m>   0.0 </y-m>
-      <z-m>  -2.15 </z-m>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
     </offsets>
   </model>
   
