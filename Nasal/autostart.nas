@@ -11,7 +11,7 @@ setlistener("/controls/autostart", func
       {
     if (getprop("/controls/engines/engine[0]/throttle") < 0.015)
         {
-	  setprop("sim/messages/copilot", "Set throttle to idle first!");
+	  setprop("/sim/messages/copilot", "Set throttle to idle first!");
           setprop("/controls/autostart", 0);
         }
     else
@@ -23,7 +23,7 @@ setlistener("/controls/autostart", func
         setprop("/controls/lighting/nav-lights", 1);
 	setprop("/controls/lighting/beacon", 1);
 	
-	setprop("sim/messages/copilot", "Main power and lights are on");
+	setprop("/sim/messages/copilot", "Main power and lights are on");
 	
 	setprop("/instrumentation/adf[0]/power-btn", 1);
 	setprop("/instrumentation/adf[1]/power-btn", 1);
@@ -32,7 +32,7 @@ setlistener("/controls/autostart", func
 	setprop("/instrumentation/nav[1]/power-btn", 1);
 	setprop("/instrumentation/transponder/serviceable", 1);
 	
-	setprop("sim/messages/copilot", "Instruments are powered");
+	setprop("/sim/messages/copilot", "Instruments are powered");
 	
 	setprop("/controls/switches/fuel", 1);
         setprop("/consumables/fuel/tank[0]/selected", 1);
@@ -55,7 +55,7 @@ setlistener("/controls/autostart", func
 	interpolate("/engines/engine[1]/running", 1, 35);
 	interpolate("/engines/engine[2]/running", 1, 52);
 	
-	setprop("sim/messages/copilot", "Engines 1-4 starting up, wait 70 seconds till idle position");
+	setprop("/sim/messages/copilot", "Engines 1-4 starting up, wait 70 seconds till idle position");
       }  
    }
   }
@@ -72,7 +72,7 @@ setlistener("/controls/electric/battery-switch", func
 	setprop("/controls/lighting/beacon", 0);
 	setprop("/controls/lighting/strobe", 0);
 	
-	setprop("sim/messages/copilot", "Main power and lights are off");
+	setprop("/sim/messages/copilot", "Main power and lights are off");
 	
 	setprop("/instrumentation/adf[0]/power-btn", 0);
 	setprop("/instrumentation/adf[1]/power-btn", 0);
@@ -81,7 +81,7 @@ setlistener("/controls/electric/battery-switch", func
 	setprop("/instrumentation/nav[1]/power-btn", 0);
 	setprop("/instrumentation/transponder/serviceable", 0);
 	
-	setprop("sim/messages/copilot", "Instruments are unpowered");
+	setprop("/sim/messages/copilot", "Instruments are unpowered");
 	
 	setprop("/controls/switches/fuel", 0);
         setprop("/consumables/fuel/tank[0]/selected", 0);
@@ -94,7 +94,7 @@ setlistener("/controls/electric/battery-switch", func
 	setprop("/engines/engine[1]/running", 0);
 	setprop("/engines/engine[2]/running", 0);
         
-	setprop("sim/messages/copilot", "Main Battery Power is off");
+	setprop("/sim/messages/copilot", "Main Battery Power is off");
       }  
   }
   );

@@ -228,7 +228,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
     </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
@@ -274,7 +274,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <effect>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
@@ -344,7 +344,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>windows</object-name>
     <object-name>propblurGE1</object-name>
@@ -613,6 +613,15 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
  <offsets> 
   <x-m> -8.074 </x-m>
       <y-m> 1.9 </y-m>
+      <z-m> -6.96 </z-m>
+ </offsets>
+</model>
+
+<model> 
+ <path>Aircraft/Tu-95MR/Models/Effects/exe/ap02.xml</path>
+ <offsets> 
+  <x-m> -25.074 </x-m>
+      <y-m> -1.9 </y-m>
       <z-m> -6.96 </z-m>
  </offsets>
 </model>

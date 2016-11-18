@@ -72,12 +72,12 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <factor>0.00058</factor>
         <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <factor>0.00004</factor>
         <min>0.0</min>
         <max>0.1</max>
@@ -95,12 +95,12 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <factor>0.00058</factor>
         <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[1]/rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <factor>0.00004</factor>
         <min>0.0</min>
         <max>0.1</max>
@@ -118,12 +118,12 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <factor>0.00058</factor>
         <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[2]/rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <factor>0.00004</factor>
         <min>0.0</min>
         <max>0.1</max>
@@ -141,12 +141,12 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <factor>0.00058</factor>
         <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[3]/rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <factor>0.00004</factor>
         <min>0.0</min>
         <max>0.1</max>
@@ -253,7 +253,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <mode>looped</mode>
       <path>Aircraft/Tu-95MR/Sounds/24roll.wav</path>
       <condition>
-          <property>/gear/gear[0]/wow</property>
+          <property>gear/gear[0]/wow</property>
       </condition>
       <volume>
         <property>sim/multiplay/generic/float[12]</property>
@@ -272,8 +272,8 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <path>Aircraft/Tu-95MR/Sounds/24roll.wav</path>
       <condition>
         <or>          
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
         </or>
       </condition>
       <volume>
@@ -295,7 +295,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <name>gear</name>
       <mode>in-transit</mode>
       <path>Aircraft/Tu-95MR/Sounds/gear.wav</path>
-      <property>/gear/gear[0]/position-norm</property>
+      <property>gear/gear[0]/position-norm</property>
       <volume>        
         <max>0.55</max>
       </volume>
@@ -308,7 +308,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
      <path>Aircraft/Tu-95MR/Sounds/gear-lck.wav</path>
      <condition>
        <greater-than>
-         <property>/gear/gear[0]/position-norm</property>
+         <property>gear/gear[0]/position-norm</property>
          <value>0.96</value>
        </greater-than>
      </condition>
@@ -326,21 +326,21 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <mode>once</mode>
       <path>Aircraft/Tu-95MR/Sounds/squeal.wav</path>
       <condition>        
-          <property>/gear/gear[0]/wow</property>                 
+          <property>gear/gear[0]/wow</property>                 
       </condition>
       <volume>
-        <property>/velocities/speed-down-fps</property>
+        <property>velocities/speed-down-fps</property>
         <factor>0.5</factor>
         <max>1.0</max>
       </volume>
       <volume>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
 	<min>0.7</min>
         <max>1.0</max>
       </volume>      
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.0025</factor>
         <offset>0.5</offset>
 	<min>0.9</min>
@@ -355,21 +355,21 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <mode>once</mode>
       <path>Aircraft/Tu-95MR/Sounds/squeal.wav</path>
       <condition>        
-          <property>/gear/gear[2]/wow</property>          
+          <property>gear/gear[2]/wow</property>          
       </condition>
       <volume>
-        <property>/velocities/speed-down-fps</property>
+        <property>velocities/speed-down-fps</property>
         <factor>0.5</factor>
         <max>1.0</max>
       </volume>
       <volume>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
 	<min>0.7</min>
         <max>1.0</max>
       </volume>      
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.0025</factor>
         <offset>0.5</offset>
 	<min>0.9</min>
@@ -385,7 +385,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/Tu-95MR/Sounds/flaps.wav</path>
-      <property>/surface-positions/flap-pos-norm</property>
+      <property>surface-positions/flap-pos-norm</property>
       <volume>
         <factor>0.25</factor>
       </volume>

@@ -41,7 +41,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <animation>
     <type>rotate</type>
     <object-name>switch</object-name>
-    <property>/controls/engines/engine[1]/condition</property>
+    <property>controls/engines/engine[1]/condition</property>
     <factor> -50 </factor>
     <center>
       <x-m> 0 </x-m>
