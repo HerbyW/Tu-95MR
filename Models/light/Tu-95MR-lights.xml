@@ -9,31 +9,329 @@ modified by Herbert Wagner 2016 for IL-76MD
 
 <PropertyList>
   
-  <path>Tu-95MR-lights.ac</path>
+  <path>Tu-95MR-lights2.ac</path>
   
   <!-- Lamps-->
-  
+
   <animation>
-    <type>select</type>
+    <type>material</type>
+    <object-name>spot_glass1</object-name>
+    <object-name>spot_glass2</object-name>
+    <emission>
+      <factor-prop>sim/multiplay/generic/int[9]</factor-prop>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+ 
+  <animation>
+    <type>material</type>
+    <object-name>spot_glass-taxi1</object-name>
+    <object-name>spot_glass-taxi2</object-name>    
+    <emission>
+      <factor-prop>sim/multiplay/generic/int[10]</factor-prop>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+ 
+ <!-- landing lights in -->
+ 
+ <animation>
+    <type>rotate</type>
     <object-name>landinglamp1</object-name>
     <object-name>landinglamp2</object-name>
     <object-name>spot_glass1</object-name>
-    <object-name>spot_glass2</object-name>
-    <condition>
-	  <property>sim/multiplay/generic/int[9]</property>
-    </condition>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
   </animation>
   
   <animation>
-    <type>select</type>
+    <type>translate</type>
+    <object-name>landinglamp1</object-name>
+    <object-name>landinglamp2</object-name>
+    <object-name>spot_glass1</object-name>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 0.14 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglamp1</object-name>
+    <object-name>spot_glass1</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 40 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> 0.844 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglamp2</object-name>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 40 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> -0.844 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+ 
+ <!-- landing lights out -->
+ 
+ <animation>
+    <type>rotate</type>
+    <object-name>landinglamp1</object-name>
+    <object-name>spot_glass1</object-name>      
+    <property>sim/multiplay/generic/int[9]</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> 0.844 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglamp2</object-name>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[9]</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> -0.844 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>landinglamp1</object-name>
+    <object-name>landinglamp2</object-name>
+    <object-name>spot_glass1</object-name>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[9]</property>
+    <factor> -0.14 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>landinglamp1</object-name>
+    <object-name>landinglamp2</object-name>
+    <object-name>spot_glass1</object-name>
+    <object-name>spot_glass2</object-name>      
+    <property>sim/multiplay/generic/int[9]</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m> -18.177 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -3.451 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+   <!-- taxi lights in -->
+ 
+ <animation>
+    <type>rotate</type>
     <object-name>taxilamp1</object-name>
     <object-name>taxilamp2</object-name>
     <object-name>spot_glass-taxi1</object-name>
-    <object-name>spot_glass-taxi2</object-name>    
-    <condition>
-	  <property>sim/multiplay/generic/int[10]</property>
-    </condition>
+    <object-name>spot_glass-taxi2</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 85 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
   </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>taxilamp1</object-name>
+    <object-name>taxilamp2</object-name>
+    <object-name>spot_glass-taxi1</object-name>
+    <object-name>spot_glass-taxi2</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 0.03 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>taxilamp1</object-name>
+    <object-name>spot_glass-taxi1</object-name>      
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> 0.394 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>taxilamp2</object-name>
+    <object-name>spot_glass-taxi2</object-name>     
+    <property>sim/multiplay/generic/int[17]</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> -0.394 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+ 
+ <!-- taxi lights out -->
+ 
+ <animation>
+    <type>rotate</type>
+    <object-name>taxilamp1</object-name>
+    <object-name>spot_glass-taxi1</object-name>       
+    <property>sim/multiplay/generic/int[10]</property>
+    <factor> -10 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> 0.394 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>taxilamp2</object-name>
+    <object-name>spot_glass-taxi2</object-name>       
+    <property>sim/multiplay/generic/int[10]</property>
+    <factor> -10 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> -0.394 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>taxilamp1</object-name>
+    <object-name>taxilamp2</object-name>
+    <object-name>spot_glass-taxi1</object-name>
+    <object-name>spot_glass-taxi2</object-name>      
+    <property>sim/multiplay/generic/int[10]</property>
+    <factor> -0.03 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>taxilamp1</object-name>
+    <object-name>taxilamp2</object-name>
+    <object-name>spot_glass-taxi1</object-name>
+    <object-name>spot_glass-taxi2</object-name>      
+    <property>sim/multiplay/generic/int[10]</property>
+    <factor> -85 </factor>
+    <center>
+      <x-m> -18.686 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -3.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  
+  
   
   <!-- No preview for fgrun-->
   <animation>
