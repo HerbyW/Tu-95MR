@@ -1,75 +1,37 @@
-English/Français
-
-[English]
-----------
-
-A little history
-================
-
 Tupolev Tu-95
-=============
-
-Manufacturer                  :
-Type                          :
-Year                          :
-Powerplant                    :
-Wingspan                      :
-Length                        :
-Height                        :
-weight                        :
-Cruise speed                  :
-Crew                          :
-
-Some useful keys:
-=================
-
-Thanks
-======
-
-===============
 BARANGER Emmanuel
 October 18 2011
 
-http://helijah.free.fr/flightgear/hangar.htm
-embaranger@free.fr
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-2016
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Tu-95MR for Flightgear
 
+Copyright (C) Herbert Wagner Nov2014-2016
 
-[Français]
-----------
+https://github.com/HerbyW?tab=repositories
 
-Un peu d'histoire
-=================
+The external flightgear hangar for signiture aircrafts and vehicles
+with state of art multiplayer functions,full rembrandt support,
+no errors and a lot of fun for you!
 
-Tupolev Tu-95
-=============
+Any problems you may tell me, they will get fixed in no time.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Constructeur                  :
-Type                          :
-Année                         :
-Moteur                        :
-Envergure                     :
-Longueur                      :
-Hauteur                       :
-Poids à vide                  :
-Vitesse de croisière          :
-Equipage                      :
+Additional works by:
 
+Firefly - 3D works March 2015
+Eagel   - Liveries April 2015 and 10/2016
 
-Quelques touches utiles :
-=========================
+See txt-files in /sounds for some sound files
 
-Remerciements
-=============
+Testing and technical help from:
 
-===============
-BARANGER Emmanuel
-18 Octobre 2011.
+Members in Mumble (D-Leon, 3-D-m, D-07007, D-Sven, Michat, joe, miguel and many more)
 
-http://helijah.free.fr/flightgear/hangar.htm
-embaranger@free.fr
+Some Instruments are from: Tu-154b, Il-76D
+
+Many files for light and smoke are derivated from 707 by Lake of Constance Hangar :: M.Kraus
+
+Each xml-file holds own copyright notices.
+
+Most content is GPL some not.

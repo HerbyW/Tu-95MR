@@ -6,15 +6,8 @@
     #############################################################################	  
 -->
 <!--
-
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-    Eagel: Liveries
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 <!-- Altimeter UVID-15 feet
 3D instrument for Tu-154 -->
@@ -62,7 +55,7 @@
     <red>1.0</red>
     <green>1.0</green>
     <blue>1.0</blue>
-    <factor-prop>controls/switches/gauge-light</factor-prop>
+    <factor-prop>sim/signals/fdm-initialized</factor-prop>
   </emission>
 </animation>
 
@@ -70,13 +63,12 @@
   <type>select</type>
   <object-name>lamp</object-name>
   <condition>    
-       <greater-than>
-      	<property>controls/switches/gauge-light</property>
-        <value>0.5</value>
-       </greater-than>       
+       <equals>
+      	<property>/instrumentation/altimeter/setting-inhg</property>
+        <value>29.92</value>
+       </equals>       
   </condition>
 </animation>
-
   
 <!--Needles-->
 <animation>
@@ -248,7 +240,7 @@
 <animation>
   <type>rotate</type>
   <object-name>dig_p_ones</object-name>
-  <property>/instrumentation/altimeter/setting-inhg</property>
+  <property>instrumentation/altimeter/setting-inhg</property>
   <factor>3600</factor>
   <center>
     <x-m>-0.01257</x-m>
@@ -269,11 +261,11 @@
     <product>
       <difference>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhgN</property>
+          <property>instrumentation/altimeter/setting-inhgN</property>
           <value>1</value>
         </mod>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhgN</property>
+          <property>instrumentation/altimeter/setting-inhgN</property>
           <value>0.1</value>
         </mod>	
       </difference>
@@ -299,11 +291,11 @@
     <product>
       <difference>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhg</property>
+          <property>instrumentation/altimeter/setting-inhg</property>
           <value>10</value>
         </mod>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhg</property>
+          <property>instrumentation/altimeter/setting-inhg</property>
           <value>1</value>
         </mod>
       </difference>
@@ -329,11 +321,11 @@
     <product>
       <difference>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhg</property>
+          <property>instrumentation/altimeter/setting-inhg</property>
           <value>100</value>
         </mod>
         <mod>
-          <property>/instrumentation/altimeter/setting-inhg</property>
+          <property>instrumentation/altimeter/setting-inhg</property>
           <value>10</value>
         </mod>
       </difference>
@@ -361,7 +353,7 @@
   <action>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/altimeter/setting-inhg</property>
+      <property>instrumentation/altimeter/setting-inhg</property>
       <factor>0.01</factor>
       <min>28.10</min>
       <max>31.00</max>

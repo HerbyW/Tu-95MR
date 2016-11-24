@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -21,11 +18,11 @@
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
       <pitch-offset-deg>-8</pitch-offset-deg>
-      <x-offset-m archive="y">   0.412 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -1.30 </y-offset-m> <!-- Up    -->
-      <z-offset-m archive="y"> -17.65 </z-offset-m> <!-- Back  -->
+      <x-offset-m archive="y">   0.63 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -1.35 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -17.85 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg> 75 </default-field-of-view-deg>
+      <default-field-of-view-deg> 85 </default-field-of-view-deg>
     </config>
   </view>
   
@@ -63,7 +60,7 @@
   </view>
 
   <view n="103">
-    <name>Cabine Camera View</name>
+    <name>Cabin Camera View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
     <config>
@@ -73,19 +70,36 @@
       <x-offset-m archive="y">   0.000 </x-offset-m> <!--Right-->
       <y-offset-m archive="y">  -1.300 </y-offset-m> <!--Up-->
       <z-offset-m archive="y"> -17.000 </z-offset-m> <!--Back-->
-      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <pitch-offset-deg> -10 </pitch-offset-deg>
       <default-field-of-view-deg type="double"> 50 </default-field-of-view-deg>
+    </config>
+  </view>
+  
+  <view n="104">
+    <name>Guest Cabine View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y">   1.17 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -1.95 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -15.67 </z-offset-m> <!-- Back  -->
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 115 </default-field-of-view-deg>
+      <heading-offset-deg type="double">245 </heading-offset-deg>
     </config>
   </view>
 
   <view n="0">
     <internal archive="y">true</internal>
     <config>
-      <x-offset-m archive="y">  -0.70 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -1.29 </y-offset-m> <!-- Up    -->
-      <z-offset-m archive="y"> -17.62 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg> 85 </default-field-of-view-deg>
+      <x-offset-m archive="y">  -0.63 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -1.33 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -17.85 </z-offset-m> <!-- Back  -->
+      <pitch-offset-deg> -8 </pitch-offset-deg>
+      <default-field-of-view-deg> 95 </default-field-of-view-deg>
     </config>
   </view>
 

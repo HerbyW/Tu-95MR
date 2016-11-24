@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -24,7 +21,7 @@
     <desc>Autostart</desc>
     <binding>
       <command>property-toggle</command>
-      <property>controls/autostart</property>
+      <property>/controls/autostart</property>
       <value>true</value>
     </binding>
   </key>
@@ -34,7 +31,7 @@
   <desc>Change Pilot Engineer View</desc>
   <binding>
     <command>property-cycle</command>
-      <property>sim/current-view/view-number</property>  
+      <property>/sim/current-view/view-number</property>  
       <value>0</value>
       <value>9</value>
   </binding>
@@ -45,7 +42,7 @@
 	<desc>Toggle Reversers</desc>
   <binding>
       <command>property-cycle</command>
-      <property>controls/reverser</property>
+      <property>/controls/reverser</property>
       <value>true</value>
       <value>false</value>
   </binding>
@@ -56,7 +53,7 @@
     <desc>Cargo Door</desc>
     <binding>
         <command>property-toggle</command>
-        <property>controls/cargodoor/signal</property>
+        <property>/controls/cargodoor/signal</property>
       </binding>   
   </key>
 

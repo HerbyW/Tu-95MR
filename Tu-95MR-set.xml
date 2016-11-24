@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList include="Tu-95MR-base.xml">
@@ -13,7 +10,7 @@
   <sim>
     
     <description>Tupolev Tu-95MR (YASim)</description>
-    <author>HerbyW (FDM,animations), BARANGER E. (3D/FDM) / F-GTUX (FDM)</author>
+    <author>Herbert Wagner (FDM,animations, 3D), Baranger E.(3D/FDM),F-GTUX(FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>Tu-95MR-yasim</aero>
     

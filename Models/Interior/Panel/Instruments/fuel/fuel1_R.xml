@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
 
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-    Eagel: Liveries
-    ###################################################################################
--->
 
 <PropertyList>
  <path>fuel1_R1.ac</path>
@@ -53,8 +43,8 @@
   <expression>
      <table>
      <sum>
-       <property>/consumables/fuel/tank[0]/level-kg</property>
-       <property>/consumables/fuel/tank[1]/level-kg</property>
+       <property>consumables/fuel/tank[0]/level-kg</property>
+       <property>consumables/fuel/tank[1]/level-kg</property>
      </sum>
      <entry><ind>  0</ind><dep>0</dep></entry> 
      <entry><ind> 21700</ind><dep>  263</dep></entry>

@@ -7,26 +7,21 @@
     #############################################################################	  
     -->
 <!--
-
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-    Eagel: Liveries
-    ###################################################################################
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 <!-- Light switches block -AN-12
 3D instrument for Tu-154 -->
 <PropertyList>
- <path>bano.ac</path>
+ <path>bano5.ac</path>
 <!--External panel lighting-->
 <animation>
   <type>material</type>
   <object-name>handle_1</object-name>
   <object-name>handle_2</object-name>
   <object-name>handle_3</object-name>
+  <object-name>handle_4</object-name>
+  <object-name>handle_5</object-name>
   <object-name>base_1</object-name>
   <object-name>base_2</object-name>
   <object-name>base_3</object-name>
@@ -73,6 +68,34 @@
   <type>rotate</type>
   <object-name>handle_3</object-name>
   <property>controls/switches/gauge-light</property>  
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	-60.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	60.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>handle_4</object-name>
+  <property>controls/lighting/beacon</property>  
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	-60.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	60.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>handle_5</object-name>
+  <property>controls/lighting/strobe</property>  
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-60.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	60.0</dep></entry>
@@ -179,6 +202,78 @@
         <command>nasal</command>
           <script>
              interpolate("controls/switches/gauge-light", 0.0, 0.1 );
+          </script>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_7</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    
+     
+     <binding>
+        <command>nasal</command>
+          <script>
+             interpolate("controls/lighting/beacon", 1.0, 0.1 );
+          </script>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_8</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    
+     
+     <binding>
+        <command>nasal</command>
+          <script>
+             interpolate("controls/lighting/beacon", 0.0, 0.1 );
+          </script>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_9</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    
+     
+     <binding>
+        <command>nasal</command>
+          <script>
+             interpolate("controls/lighting/strobe", 1.0, 0.1 );
+          </script>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_10</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    
+     
+     <binding>
+        <command>nasal</command>
+          <script>
+             interpolate("controls/lighting/strobe", 0.0, 0.1 );
           </script>
      </binding>
   </action>

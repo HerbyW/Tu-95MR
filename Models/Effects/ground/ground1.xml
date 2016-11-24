@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -18,9 +15,9 @@
 
     <condition>
       <and>
-        <property>/gear/gear[1]/wow</property>
+        <property>sim/multiplay/generic/int[18]</property>
         <greater-than>
-          <property>/gear/gear[1]/rollspeed-ms</property>
+          <property>sim/multiplay/generic/float[12]</property>
           <value>15</value>
         </greater-than>
       </and>
@@ -53,7 +50,7 @@
 
     <counter>
       <particles-per-sec>
-        <value>150</value>
+        <value>50</value>
         <spread>0</spread>
       </particles-per-sec>
     </counter>
@@ -63,18 +60,18 @@
     <particle>
       <start>
         <color>
-          <red><value>   0.95 </value></red>
-          <green><value> 0.95 </value></green>
-          <blue><value>  0.95 </value></blue>
+          <red><value>   0.45 </value></red>
+          <green><value> 0.45 </value></green>
+          <blue><value>  0.45 </value></blue>
           <alpha><value> 0.05 </value></alpha>
         </color>
         <size><value> 0.5 </value></size>
       </start>
       <end>
         <color>
-          <red><value>   1.000 </value></red>
-          <green><value> 1.000 </value></green>
-          <blue><value>  1.000 </value></blue>
+          <red><value>   0.400 </value></red>
+          <green><value> 0.400 </value></green>
+          <blue><value>  0.400 </value></blue>
           <alpha><value> 0.020 </value></alpha>
         </color>
         <size><value> 3 </value></size>

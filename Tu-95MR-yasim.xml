@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 
@@ -56,11 +53,20 @@ Armament
 
     Radar-controlled guns: 1 or 2 × 23 mm AM-23 autocannon in tail turret.
     Missiles: Up to 15,000 kg (33,000 lb), including the Raduga Kh-20, Kh-22, and Kh-55/101/102 Air-to-surface missiles.
+
+            YASim solution results:
+       Iterations: 1652
+ Drag Coefficient: 10.1017
+       Lift Ratio: 239.079
+       Cruise AoA: 0.675514
+   Tail Incidence: -4.25374
+Approach Elevator: -0.327475
+            CG: 1.440, 0.000, -1.834   330
     -->
 
 <airplane mass="145000" version="YASIM_VERSION_CURRENT">
 
-  <approach speed="110" aoa="3" fuel="0.2">
+  <approach speed="90" aoa="5" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle-v" value="0.7"/>
     <control-setting axis="/controls/engines/engine[0]/condition" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0"/>
@@ -77,7 +83,7 @@ Armament
     <control-setting axis="/controls/engines/engine[3]/condition" value="1"/>
     <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0"/>
 
-    <control-setting axis="/controls/flight/flaps" value="0.5"/>
+    <control-setting axis="/controls/flight/flaps" value="0.7"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
@@ -125,7 +131,7 @@ Armament
 	incidence="2"
 	twist="-2"
         dihedral="-2.5"
-        camber="0.05">
+        camber="0.02">
         <stall aoa="9" width="8" peak="1.5"/>
         <flap0 start="0.10" end="0.60" lift="1.5" drag="1.8"/>
         <flap1 start="0.75" end="1.0" lift="1.3" drag="1.1"/>
@@ -137,6 +143,10 @@ Armament
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
         <control-speed control="FLAP0" transition-time="12"/>
         <control-speed control="FLAP1" transition-time="1"/>
+        <spoiler start="0" end="1" lift="0.05" drag="11"/>
+	<control-input axis="/controls/flight/spoilers" control="SPOILER" src0="0" src1="1" dst0="0" dst1="1"/>
+	<control-output control="SPOILER" prop="/surface-positions/spoiler-pos-norm"/>
+	<control-speed control="SPOILER" transition-time="1.0"/>
   </wing>
 
   <!-- Elevator -->
@@ -148,7 +158,7 @@ Armament
          sweep="34"
 	 camber="0.07">
          <stall aoa="18" width="8" peak="1.5"/>
-         <flap0 start="0" end="0.95" lift="1.9" drag="1.1"/>
+         <flap0 start="0" end="0.95" lift="1.7" drag="1.1"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>	 
@@ -182,7 +192,7 @@ Armament
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -194,6 +204,7 @@ Armament
 	     manual="true"
 	     contra="1">
     <actionpt x="8.228" y="12.321" z="-2.709"/>
+    <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
     <turbine-engine eng-power="15990"
 		    eng-rpm="750"
 		    alt="22000"
@@ -201,26 +212,19 @@ Armament
 		    n2-high-idle="65"
 		    n2-max="100"
 		    flat-rating="15990"
-		    bsfc="0.45">
+		    bsfc="0.36">
       </turbine-engine>
-      <control-input axis="/controls/engines/engine[0]/throttle-v" control="THROTTLE"/>
-      <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-      <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-      <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
-      <control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>
-      
-      <control-output control="ADVANCE" prop="/engines/engine[0]/propeller-pitch"/>
-      
-      <control-speed control="THROTTLE" transition-time="10"/>   
+      <control-input axis="/controls/engines/engine[0]/throttle-v" control="THROTTLE"/>      
+      <control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>    
       </propeller>
       
       <!-- Left interior -->
       <propeller x="9.469" y="6.411" z="-2.797"
-		 radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -232,6 +236,7 @@ Armament
 	     manual="true"
 	     contra="1">
 	<actionpt x="11.510" y="6.411" z="-2.797"/>
+	<control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
 	<turbine-engine eng-power="15990"
 		 eng-rpm="750"
 		 alt="22000"
@@ -239,26 +244,19 @@ Armament
 		 n2-high-idle="65"
 		 n2-max="100"
 		 flat-rating="15990"
-		 bsfc="0.45">
+		 bsfc="0.36">
 	  </turbine-engine>
 	  <control-input axis="/controls/engines/engine[1]/throttle-v" control="THROTTLE"/>
-	  <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
-	  <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-	  <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
-	  <control-input axis="/controls/engines/engine[1]/condition" control="CONDLEVER"/>
-	  
-	  <control-output control="ADVANCE" prop="/engines/engine[1]/propeller-pitch"/>
-	  
-	  <control-speed control="THROTTLE" transition-time="10"/>   
+	  <control-input axis="/controls/engines/engine[1]/condition" control="CONDLEVER"/>     
 	  </propeller>
 	  
 	  <!-- Right interior (engine left) -->
 	  <propeller x="9.469" y="-6.411" z="-2.797"
-	      radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -270,6 +268,7 @@ Armament
 	     manual="true"
 	     contra="1">
 	    <actionpt x="11.510" y="-6.411" z="-2.797"/>
+	    <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
 	    <turbine-engine eng-power="15990"
 		     eng-rpm="750"
 		     alt="22000"
@@ -277,26 +276,19 @@ Armament
 		     n2-high-idle="65"
 		     n2-max="100"
 		     flat-rating="15990"
-		     bsfc="0.45">
+		     bsfc="0.36">
 	      </turbine-engine>
-	      <control-input axis="/controls/engines/engine[2]/throttle-v" control="THROTTLE"/>
-	      <control-input axis="/controls/engines/engine[2]/starter" control="STARTER"/>
-	      <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
-	      <control-input axis="/controls/engines/engine[2]/propeller-feather" control="PROPFEATHER"/>
-	      <control-input axis="/controls/engines/engine[2]/condition" control="CONDLEVER"/>
-	      
-	      <control-output control="ADVANCE" prop="/engines/engine[2]/propeller-pitch"/>
-	      
-	      <control-speed control="THROTTLE" transition-time="10"/>   
+	      <control-input axis="/controls/engines/engine[2]/throttle-v" control="THROTTLE"/>      
+	      <control-input axis="/controls/engines/engine[2]/condition" control="CONDLEVER"/>        
 	      </propeller>
 	      
 	      <!-- Right exterior (engine left) -->
 	      <propeller x="6.188" y="-12.312" z="-2.709"
-		  radius="3.188"
+	     radius="3.188"
 	     mass="7548"
 	     moment="3000"      
 	     cruise-alt="32370"
-	     cruise-speed="340"
+	     cruise-speed="380"
 	     cruise-rpm="700"
 	     cruise-power="11800"
 	     takeoff-rpm="750"
@@ -308,6 +300,7 @@ Armament
 	     manual="true"
 	     contra="1">
 		<actionpt x="8.228" y="-12.321" z="-2.709"/>
+		<control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
 		<turbine-engine eng-power="15990"
 		  eng-rpm="750"
 		  alt="22000"
@@ -315,25 +308,20 @@ Armament
 		  n2-high-idle="65"
 		  n2-max="100"
 		  flat-rating="15990"
-		  bsfc="0.45">
+		  bsfc="0.36">
 		  </turbine-engine>
-		  <control-input axis="/controls/engines/engine[3]/throttle-v" control="THROTTLE"/>
-		  <control-input axis="/controls/engines/engine[3]/starter" control="STARTER"/>
-		  <control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
-		  <control-input axis="/controls/engines/engine[3]/propeller-feather" control="PROPFEATHER"/>
-		  <control-input axis="/controls/engines/engine[3]/condition" control="CONDLEVER"/>
-		  
-		  <control-output control="ADVANCE" prop="/engines/engine[3]/propeller-pitch"/>
-		  
-		  <control-speed control="THROTTLE" transition-time="10"/>   
+		  <control-input axis="/controls/engines/engine[3]/throttle-v" control="THROTTLE"/>  
+		  <control-input axis="/controls/engines/engine[3]/condition" control="CONDLEVER"/>   
 		  </propeller>
 		  
   <!-- Nose wheel -->
-  <gear x="18.031" y="0.000" z="-7.077" 
+  <gear x="18.031" y="0.000" z="-7.00" 
         compression="0.5" 
         retract-time="5" 
         spring="3.0" 
-        damp="1.35">
+        damp="1.35"
+        sfric="0.9" 
+        dfric="0.6">
         <control-input axis="/controls/flight/rudder" control="STEER"
     src0="-1.0" dst0="-0.8052" src1="1.0" dst1="0.8052" square="true"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>        
@@ -343,8 +331,8 @@ Armament
         <control-speed control="EXTEND" transition-time="9.7"/>
   </gear>
 
-  <!-- Left wheels all 6 wheels 2m backwards to get better standing conditions-->
-  <gear x="3.239" y="6.411" z="-7"
+  <!-- Left wheels all 4 wheels 2m backwards to get better standing conditions-->
+  <gear x="3.239" y="6.411" z="-7.1"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -358,7 +346,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="2.138" y="6.411" z="-7.125"
+  <gear x="0.074" y="6.411" z="-7.03"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -372,22 +360,8 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
-  <gear x="1.074" y="6.411" z="-7.25"
-        compression="0.5" 
-        retract-time="7" 
-        spring="0.8" 
-        damp="1.1" 
-        sfric="0.9" 
-        dfric="0.5">
-        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="9.7"/>
-        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
-  </gear>
-
   <!-- Right wheels -->
-  <gear x="3.239" y="-6.411" z="-7"
+  <gear x="3.239" y="-6.411" z="-7.1"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -401,7 +375,7 @@ Armament
         <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   </gear>
 
-  <gear x="2.138" y="-6.411" z="-7.125"
+  <gear x="0.074" y="-6.411" z="-7.03"
         compression="0.5" 
         retract-time="7" 
         spring="0.8" 
@@ -413,20 +387,6 @@ Armament
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-speed control="EXTEND" transition-time="9.7"/>
         <control-output control="EXTEND" prop="/gear/gear[5]/position-norm"/>
-  </gear>
-
-  <gear x="1.074" y="-6.411" z="-7.25"
-        compression="0.5" 
-        retract-time="7" 
-        spring="0.8" 
-        damp="1.1" 
-        sfric="0.9" 
-        dfric="0.5">
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="9.7"/>
-        <control-output control="EXTEND" prop="/gear/gear[6]/position-norm"/>
   </gear>
 
   <!-- Tail wheel -->
@@ -446,8 +406,8 @@ Armament
 
   <tank x="5.00" y=" 7" z="-2.466" capacity="67950"/>
   <tank x="5.00" y="-7" z="-2.466" capacity="67950"/>
-  <tank x="12.00" y=" 0" z="-2.466" capacity="27950"/>
-  <tank x="-6.00" y="0" z="-2.466" capacity="20950"/>
+  <tank x="12.00" y=" 0" z="-2.466" capacity="28950"/>
+  <tank x="-6.00" y="0" z="-2.466" capacity="23450"/>
 
   <!-- Mass distribution old was CG: 4.696, 0.000, -2.812-->
   <ballast x="18.5" y="0" z="-2.14" mass="20000"/>

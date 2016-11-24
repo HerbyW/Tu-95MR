@@ -2,6 +2,8 @@
 #
 #  frank-deng committed on 22 Nov 
 #
+#  Copyright (C) Herbert Wagner Dec2014-2016
+
 var next_waypoint = func {
 	if ("true-heading-hold" == getprop("/autopilot/locks/heading")
 		and getprop("/autopilot/route-manager/active")) {
@@ -12,7 +14,7 @@ var next_waypoint = func {
 		var wp_dist = getprop("/autopilot/route-manager/wp/dist");
 
 		if (eta_seconds != nil and wp_dist != nil
-			and eta_seconds < 37 and wp_dist < 30) {
+			and eta_seconds < 45 and wp_dist < 35) {
 
 			if (getprop("/autopilot/route-manager/current-wp")<=max_wpt){
 				atm_wpt+=1;

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    ###################################################################################
-    Antonov and Topolev Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later    
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -20,7 +17,7 @@
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.30</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
@@ -33,11 +30,10 @@
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.32</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
     
     <crank>
@@ -47,11 +43,10 @@
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.34</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
     
     <crank>
@@ -61,11 +56,10 @@
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>      
       <volume>
-        <offset>-0.45</offset>
+        <offset>-0.36</offset>
       </volume>
       <reference-dist>10</reference-dist>
       <max-dist>1000</max-dist>
-      <delay-sec>0</delay-sec>
     </crank>
   
   <!-- Engines 1 -4 running -->
@@ -73,106 +67,184 @@
     <engine>
       <name>engine0</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-left.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[12]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>        
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.0004</factor>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-    <!-- Moteur 2 -->
     <engine>
       <name>engine1</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-links.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-left.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[13]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>       
+        <property>engines/engine[1]/rpm</property>
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.0004</factor>
+        <property>engines/engine[1]/rpm</property>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-
-    <!-- Moteur 3 -->
     <engine>
       <name>engine2</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-right.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[14]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[2]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>        
+        <property>engines/engine[2]/rpm</property>
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[2]/rpm</property>
-        <factor>0.0004</factor>
+        <property>engines/engine[2]/rpm</property>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
 
-    
-
-    <!-- Moteur 4 -->
     <engine>
       <name>engine3</name>
       <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/Tupolev-Tu-95MR-2-rechts.wav</path>
+      <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-right.wav</path>
       <condition>       
          <property>sim/multiplay/generic/int[15]</property>         
         </condition>  
       <volume>
-        <property>/engines/engine[3]/rpm</property>
-        <factor>0.00133</factor>
-        <min>0.10</min>
-        <max>1.0</max>       
+        <property>engines/engine[3]/rpm</property>
+        <factor>0.00058</factor>
+        <offset>0.055</offset>
       </volume>
       <pitch>
-        <property>/engines/engine[3]/rpm</property>
-        <factor>0.0004</factor>
+        <property>engines/engine[3]/rpm</property>
+        <factor>0.00004</factor>
         <min>0.0</min>
-        <max>0.2</max>
+        <max>0.1</max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>10000</max-dist>
+      <reference-dist>1000</reference-dist>
+      <max-dist>28000</max-dist>
       <delay-sec>17</delay-sec>
     </engine>
+    
+    <!-- Engines 1 -4 reverse-runway -->
+		
+		<engine0r>
+		  <name>engine0r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-left.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[12]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[8]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-5.2</x>
+		    <y>-13.4</y>
+		    <z>-1.1</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine0r>
+		
+		<engine1r>
+		  <name>engine1r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-left.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[13]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[9]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-4.32</x>
+		    <y>-6.88</y>
+		    <z>-0.25</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine1r>
+		
+		<engine2r>
+		  <name>engine2r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-right.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[14]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[10]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>      
+		  </volume>
+		  <position>
+		    <x>-4.32</x>
+		    <y> 6.88</y>
+		    <z>-0.25</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine2r>
+		
+		<engine3r>
+		  <name>engine3r</name>
+		  <mode>looped</mode>
+		  <path>Aircraft/Tu-95MR/Sounds/Antonov22Antei-PARADISE-Views-reverse-right.wav</path>      
+		  <condition>       
+		    <property>sim/multiplay/generic/int[15]</property>
+		    <property>sim/multiplay/generic/int[6]</property>
+		  </condition>  
+		  <volume>
+		    <property>sim/multiplay/generic/float[11]</property>
+		    <factor>0.3</factor>
+		    <offset>0.1</offset>       
+		  </volume>
+		  <position>
+		    <x>-5.8</x>
+		    <y>6.9</y>
+		    <z>-1.1</z>
+		  </position>
+		  <reference-dist>100</reference-dist>
+		  <max-dist>10000</max-dist>
+		</engine3r>
 
      <!-- Rumble on runway -->
 
@@ -181,7 +253,7 @@
       <mode>looped</mode>
       <path>Aircraft/Tu-95MR/Sounds/24roll.wav</path>
       <condition>
-          <property>/gear/gear[0]/wow</property>
+          <property>gear/gear[0]/wow</property>
       </condition>
       <volume>
         <property>sim/multiplay/generic/float[12]</property>
@@ -200,8 +272,8 @@
       <path>Aircraft/Tu-95MR/Sounds/24roll.wav</path>
       <condition>
         <or>          
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
         </or>
       </condition>
       <volume>
@@ -214,14 +286,16 @@
       <reference-dist>100</reference-dist>
       <max-dist>2000</max-dist>
     </rumble>
-
+    
+    
+    
     <!-- Gear in and out -->
     
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
       <path>Aircraft/Tu-95MR/Sounds/gear.wav</path>
-      <property>/gear/gear[0]/position-norm</property>
+      <property>gear/gear[0]/position-norm</property>
       <volume>        
         <max>0.55</max>
       </volume>
@@ -234,7 +308,7 @@
      <path>Aircraft/Tu-95MR/Sounds/gear-lck.wav</path>
      <condition>
        <greater-than>
-         <property>/gear/gear[0]/position-norm</property>
+         <property>gear/gear[0]/position-norm</property>
          <value>0.96</value>
        </greater-than>
      </condition>
@@ -252,21 +326,21 @@
       <mode>once</mode>
       <path>Aircraft/Tu-95MR/Sounds/squeal.wav</path>
       <condition>        
-          <property>/gear/gear[0]/wow</property>                 
+          <property>gear/gear[0]/wow</property>                 
       </condition>
       <volume>
-        <property>/velocities/speed-down-fps</property>
+        <property>velocities/speed-down-fps</property>
         <factor>0.5</factor>
         <max>1.0</max>
       </volume>
       <volume>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
 	<min>0.7</min>
         <max>1.0</max>
       </volume>      
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.0025</factor>
         <offset>0.5</offset>
 	<min>0.9</min>
@@ -281,21 +355,21 @@
       <mode>once</mode>
       <path>Aircraft/Tu-95MR/Sounds/squeal.wav</path>
       <condition>        
-          <property>/gear/gear[2]/wow</property>          
+          <property>gear/gear[2]/wow</property>          
       </condition>
       <volume>
-        <property>/velocities/speed-down-fps</property>
+        <property>velocities/speed-down-fps</property>
         <factor>0.5</factor>
         <max>1.0</max>
       </volume>
       <volume>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
 	<min>0.7</min>
         <max>1.0</max>
       </volume>      
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.0025</factor>
         <offset>0.5</offset>
 	<min>0.9</min>
@@ -311,7 +385,7 @@
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/Tu-95MR/Sounds/flaps.wav</path>
-      <property>/surface-positions/flap-pos-norm</property>
+      <property>surface-positions/flap-pos-norm</property>
       <volume>
         <factor>0.25</factor>
       </volume>
@@ -320,113 +394,47 @@
     </flap>
     
 
-     <!-- Speed Warning -->
- 
-    <speedwarn>
-      <name>warn1</name>
-      <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/dinamik_pr2.wav</path>
-       <condition>
-        <greater-than>
-	 <property>velocities/groundspeed-kt</property>
-	 <value>510</value>
-         </greater-than>
-        </condition> 
-      <volume>
-	<offset>1.0</offset>
-	<min>1.0</min>
-        <max>1.0</max>
-      </volume>
-      <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
-    </speedwarn>
-
-        <!-- Decision Height Warning -->
- 
-    <decision>
-      <name>decision</name>
-      <mode>once</mode>
-      <path>Aircraft/Tu-95MR/Sounds/omi_1.wav</path>
-      <condition>
-    <less-than>
-      <property>position/altitude-agl-ft</property>
-      <property>instrumentation/altimeter/decision-height</property>      
-    </less-than>
-  </condition>
-      <volume>
-	<min>1.0</min>
-        <max>1.0</max>
-      </volume>
-      <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
-    </decision>
+ <!-- Doors -->
   
-
-        <!-- Wind -->
-
-    <wind>
-      <name>wind</name>
-      <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/wind.wav</path>
-      <property>/environment/wind-speed-kt</property>
-      <volume>
-        <property>/environment/wind-speed-kt</property>
-        <factor>0.0025</factor>
-        <min>0.00</min>
-        <max>0.20</max>
-      </volume>
-      <pitch>
-        <property>/environment/wind-speed-kt</property>
-        <factor>0.01</factor>
-        <offset>0.2</offset>
-        <max>0.70</max>
-      </pitch>
-      <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
-    </wind>
-    
-    <!-- Rain -->
-    
-    <rain>
-      <name>rain</name>
-      <mode>looped</mode>
-      <path>Aircraft/Tu-95MR/Sounds/rain_canopy.wav</path>
+    <door>
+      <name>Weapon doorT</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/Tu-95MR/Sounds/door_close.wav</path>
       <condition>
-        <greater-than>
-          <property>/environment/metar/rain-norm</property>
-          <value>0.2</value>
+       <and>
+	<greater-than>
+          <property>sim/multiplay/generic/float[13]</property>
+          <value>0.01</value>
         </greater-than>
+	<less-than>
+          <property>sim/multiplay/generic/float[13]</property>
+          <value>0.99</value>
+        </less-than>
+       </and>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
-        <factor>1.00</factor>
-        <offset>-0.2</offset>
-        <min>0.0</min>
-        <max>0.6</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.001</factor>
-        <offset>0.50</offset>
-      </pitch>
-      <reference-dist>10</reference-dist>
-      <max-dist>100</max-dist>
-    </rain>
-    
- 
-    <stall>
-      <name>stall</name>
-      <mode>looped</mode>
-      <path>Sounds/stall.wav</path>
-      <property>/sim/alarms/stall-warning</property>
-      <volume>
-        <property>/sim/alarms/stall-warning</property>
-        <max>1.0</max>
+        <factor>0.11</factor>
       </volume>
       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </stall>
- 
+      <max-dist>500</max-dist>
+    </door>
+    
+    <door>
+      <name>Weapon door</name>
+      <path>Aircraft/Tu-95MR/Sounds/door_closed.wav</path>
+      <condition>
+        <equals>
+          <property>sim/multiplay/generic/float[13]</property>
+          <value>0.0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.35</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </door>
+  
   </fx>
  
 </PropertyList>

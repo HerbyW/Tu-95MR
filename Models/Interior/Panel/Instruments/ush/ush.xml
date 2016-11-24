@@ -7,15 +7,8 @@
     #############################################################################	  
     -->
 <!--
-
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
-    Eagel: Liveries
-    ###################################################################################
+Copyright (C) Herbert Wagner Nov2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 <!-- Heading indicator USH
 3D instrument for Tu-154 -->
@@ -51,7 +44,7 @@
 <animation>
   <type>rotate</type>
   <object-name>compass</object-name>
-   <property>controls/switches/gauge-light</property>   
+   <property>sim/signals/fdm-initialized</property>   
    <factor> 180 </factor>  
   <axis>
     <x>-1.0</x>
@@ -70,7 +63,7 @@
       <command>set-tooltip</command>
       <tooltip-id>Drift</tooltip-id>
       <label>Wind Drift: %5.2f</label>
-      <property>/instrumentation/drift</property>      
+      <property>instrumentation/drift</property>      
     </binding>
   </hovered> 
   
@@ -107,7 +100,7 @@
   <type>rotate</type>
   <object-name>needle_1</object-name>
   <object-name>needle_2</object-name>
-  <property>/orientation/heading-deg</property>
+  <property>orientation/heading-deg</property>
   <axis>
     <x>-1.0</x>
     <y>0.0</y>
@@ -118,7 +111,7 @@
 <animation>
   <type>rotate</type>
   <object-name>needle_2</object-name>  
-  <property>/instrumentation/drift</property>
+  <property>instrumentation/drift</property>
   <axis>
     <x>-1.0</x>
     <y>0.0</y>
