@@ -70,7 +70,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <sim include="Systems/views.xml">
       
       <author>Herbert Wagner (FDM,3D, animations), Baranger E.(3D/FDM)/F-GTUX(FDM)</author>
-      <aircraft-version>3.0.3</aircraft-version>
+      <aircraft-version>3.0.4</aircraft-version>
       <status>production</status>
       <rating>
 	<FDM type="int">4</FDM>
@@ -93,7 +93,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	<door-positions>
           <refil><position-norm type="double">0</position-norm></refil>
         </door-positions>
-	<Tu-95MR><version type="string">3.0.3</version></Tu-95MR>
+	<Tu-95MR><version type="string">3.0.4</version></Tu-95MR>
 	<anti-ice-alpha type="float">1</anti-ice-alpha>
 	<anti-ice-rotor type="float">1</anti-ice-rotor>
 	<iceing type="float">1</iceing>
