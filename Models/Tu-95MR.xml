@@ -199,9 +199,9 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <texture>texture.png</texture>
     <emission>
       
-      <red>   0.4 </red>
-      <green> 0.4 </green>
-      <blue>  0.4 </blue>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
     </emission>
   </animation>
   
