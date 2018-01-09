@@ -76,10 +76,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 		<particle>
 			<start>
 				<color>
-					<red><value>0.32</value></red>
-					<green><value>0.32</value></green>
-					<blue><value>0.32</value></blue>
-					<alpha><value>0.06</value></alpha>
+					<red><value>0.45</value></red>
+					<green><value>0.45</value></green>
+					<blue><value>0.45</value></blue>
+					<alpha><value>0.03</value></alpha>
 				</color>
 				<size>
 					<value>0.5</value>
@@ -87,13 +87,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 			</start>
 			<end>
 				<color>
-					<red><value>0.85</value></red>
-					<green><value>0.85</value></green>
-					<blue><value>0.85</value></blue>
+					<red><value>0.75</value></red>
+					<green><value>0.75</value></green>
+					<blue><value>0.75</value></blue>
 					<alpha><value>0.0</value></alpha>
 				</color>
 				<size>
-					<value>32</value>
+					<value>20</value>
 				</size>
 			</end>
 			<life-sec>

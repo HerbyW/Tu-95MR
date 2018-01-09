@@ -90,7 +90,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       </end>
 
       <life-sec>
-        <value>10</value>
+        <value>15</value>
       </life-sec>
         
       <mass-kg>  0.5 </mass-kg>
