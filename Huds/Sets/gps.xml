@@ -201,11 +201,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <width>2</width>
 	      <height>2</height>
 	      <y>-41</y>
-	      <format>GS:%7.5fkm/s</format>
+	      <format>GS:%6.2fkm/h</format>
 	      <halign>left</halign>
 	      <input>
 		<property>/instrumentation/gps/indicated-ground-speed-kt</property>
-		<factor>0.00051444444444444</factor>
+		<factor>1.852</factor>
 	      </input>
 	    </label>
 	    
