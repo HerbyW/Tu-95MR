@@ -1,5 +1,11 @@
 # Tupolew Tu-95MR
-for Flightgear Flightsimulator by Herbert Wagner
+
+for FlightGear Flightsimulator by Herbert Wagner
+
+++++++++++++++++++++++++++++++++++++++
+based on:
+Tupolev Tu-95, BARANGER Emmanuel, 2011
+++++++++++++++++++++++++++++++++++++++
 
 New Instrumentation, new panels, new interior and hundreds of addings to the official Version.
 
@@ -18,4 +24,6 @@ Each xml-file holds own copyright notices.
 
 LICENSE: This aircraft is released under the GNU GPL v2 License, see COPYING file.
 
-Instalation: Unzip and copy into the aircraft folder.
+Installation: Unzip and copy into the aircraft folder.
+
+See aircraft help for detailed instructions.
